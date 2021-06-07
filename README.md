@@ -1,4 +1,4 @@
-# InsightPhysicsImmersionWeek
+# Insight Physics Immersion 
 This GitHub repository contains all teaching material relevant for the Physics Immersion week of the Insight program.  The aim is to give you an introduction on how to use programming and numerical mathematics (parts of Computational Science) to solve Physics problems, starting with problems from mechanics and the solution of differential equations to eigenvalue problems and quantum mechanics.  
 
 ## Assumed knowledge and planned outcomes:
