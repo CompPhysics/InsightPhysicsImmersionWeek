@@ -1,4 +1,4 @@
-# Two-body problems, from the Gravitational Force to Two-body Scattering
+# Two-body problems
 
 ## Introduction and Definitions
 
@@ -93,8 +93,7 @@ new insights about the properties of a system. Where possible, we will
 compare our analytical equations with numerical studies.
 
 However, before we arrive at these lovely insights, we need to
-introduce some mathematical manipulations and definitions. We conclude
-this chapter with a discussion of two-body scattering.
+introduce some mathematical manipulations and definitions.
 
 
 ## Center of Mass and Relative Coordinates
@@ -228,8 +227,8 @@ trajectory depends only on the total mass $M$.
 
 The standard strategy is to transform into the center of mass frame,
 then treat the problem as one of a single particle of mass $\mu$
-undergoing a force $\boldsymbol{F}_{12}$. Scattering angles, see our discussion of scattering problems below, can also be
-expressed in this frame.  Before we proceed to our definition of the CoM frame we need to set up the expression for the energy in terms of the relative and CoM coordinates.
+undergoing a force $\boldsymbol{F}_{12}$. 
+Before we proceed to our definition of the CoM frame we need to set up the expression for the energy in terms of the relative and CoM coordinates.
 
 
 ### Kinetic and total Energy
@@ -1208,626 +1207,6 @@ save_fig("2DimGravity")
 plt.show()
 print(E)
 
-## Scattering and Cross Sections
-
-Scattering experiments don't measure entire trajectories. For elastic
-collisions, they measure the distribution of final scattering angles
-at best. Most experiments use targets thin enough so that the number
-of scatterings is typically zero or one. The cross section, $\sigma$,
-describes the cross-sectional area for particles to scatter with an
-individual target atom or nucleus. Cross section measurements form the
-basis for MANY fields of physics. BThe cross section, and the
-differential cross section, encapsulates everything measurable for a
-collision where all that is measured is the final state, e.g. the
-outgoing particle had momentum $\boldsymbol{p}_f$. y studying cross sections,
-one can infer information about the potential interaction between the
-two particles. Inferring, or constraining, the potential from the
-cross section is a classic {\it inverse} problem. Collisions are
-either elastic or inelastic. Elastic collisions are those for which
-the two bodies are in the same internal state before and after the
-collision. If the collision excites one of the participants into a
-higher state, or transforms the particles into different species, or
-creates additional particles, the collision is inelastic. Here, we
-consider only elastic collisions.
-
-For Coulomb forces, the cross section is infinite because the range of
-the Coulomb force is infinite, but for interactions such as the strong
-interaction in nuclear or particle physics, there is no long-range
-force and cross-sections are finite. Even for Coulomb forces, the part
-of the cross section that corresponds to a specific scattering angle,
-$d\sigma/d\Omega$, which is a function of the scattering angle
-$\phi_s$ is still finite.
-
-If a particle travels through a thin target, the chance the particle
-scatters is $P_{\rm scatt}=\sigma dN/dA$, where $dN/dA$ is the number
-of scattering centers per area the particle encounters. If the density
-of the target is $\rho$ particles per volume, and if the thickness of
-the target is $t$, the areal density (number of target scatterers per
-area) is $dN/dA=\rho t$. Because one wishes to quantify the collisions
-independently of the target, experimentalists measure scattering
-probabilities, then divide by the areal density to obtain
-cross-sections,
-
-$$
-\begin{eqnarray}
-\sigma=\frac{P_{\rm scatt}}{dN/dA}.
-\end{eqnarray}
-$$
-
-Instead of merely stating that a particle collided, one can measure
-the probability the particle scattered by a given angle. The
-scattering angle $\phi_s$ is defined so that at zero the particle is
-unscattered and at $\phi_s=\pi$ the particle is scattered directly
-backward. Scattering angles are often described in the center-of-mass
-frame, but that is a detail we will neglect for this first discussion,
-where we will consider the scattering of particles moving classically
-under the influence of fixed potentials $U(\boldsymbol{r})$. Because the
-distribution of scattering angles can be measured, one expresses the
-differential cross section,
-
-<!-- Equation labels as ordinary links -->
-<div id="_auto5"></div>
-
-$$
-\begin{equation}
-\frac{d^2\sigma}{d\cos\phi_s~d\phi}.
-\label{_auto5} \tag{10}
-\end{equation}
-$$
-
-Usually, the literature expresses differential cross sections as
-
-<!-- Equation labels as ordinary links -->
-<div id="_auto6"></div>
-
-$$
-\begin{equation}
-d\sigma/d\Omega=\frac{d\sigma}{d\cos\phi d\phi}=\frac{1}{2\pi}\frac{d\sigma}{d\cos\phi},
-\label{_auto6} \tag{11}
-\end{equation}
-$$
-
-where the last equivalency is true when the scattering does not depend
-on the azimuthal angle $\phi$, as is the case for spherically
-symmetric potentials.
-
-The differential solid angle $d\Omega$ can be thought of as the area
-subtended by a measurement, $dA_d$, divided by $r^2$, where $r$ is the
-distance to the detector,
-
-$$
-\begin{eqnarray}
-dA_d=r^2 d\Omega.
-\end{eqnarray}
-$$
-
-With this definition $d\sigma/d\Omega$ is independent of the distance
-from which one places the detector, or the size of the detector (as
-long as it is small).
-
-Differential scattering cross sections are calculated by assuming a
-random distribution of impact parameters $b$. These represent the
-distance in the $xy$ plane for particles moving in the $z$ direction
-relative to the scattering center. An impact parameter $b=0$ refers to
-being aimed directly at the target's center. The impact parameter
-describes the transverse distance from the $z=0$ axis for the
-trajectory when it is still far away from the scattering center and
-has not yet passed it. The differential cross section can be expressed
-in terms of the impact parameter,
-
-<!-- Equation labels as ordinary links -->
-<div id="_auto7"></div>
-
-$$
-\begin{equation}
-d\sigma=2\pi bdb,
-\label{_auto7} \tag{12}
-\end{equation}
-$$
-
-which is the area of a thin ring of radius $b$ and thickness $db$. In
-classical physics, one can calculate the trajectory given the incoming
-kinetic energy $E$ and the impact parameter if one knows the mass and
-potential. From the trajectory, one then finds the scattering angle
-$\phi_s(b)$. The differential cross section is then
-
-<!-- Equation labels as ordinary links -->
-<div id="_auto8"></div>
-
-$$
-\begin{equation}
-\frac{d\sigma}{d\Omega}=\frac{1}{2\pi}\frac{d\sigma}{d\cos\phi_s}=b\frac{db}{d\cos\phi_s}=\frac{b}{(d/db)\cos\phi_s(b)}.
-\label{_auto8} \tag{13}
-\end{equation}
-$$
-
-Typically, one would calculate $\cos\phi_s$ and $(d/db)\cos\phi_s$
-as functions of $b$. This is sufficient to plot the differential cross
-section as a function of $\phi_s$.
-
-The total cross section is
-
-<!-- Equation labels as ordinary links -->
-<div id="_auto9"></div>
-
-$$
-\begin{equation}
-\sigma_{\rm tot}=\int d\Omega\frac{d\sigma}{d\Omega}=2\pi\int d\cos\phi_s~\frac{d\sigma}{d\Omega}. 
-\label{_auto9} \tag{14}
-\end{equation}
-$$
-
-Even if the total cross section is infinite, e.g. Coulomb forces, one
-can still have a finite differential cross section as we will see
-later on.
-
-
-An asteroid of mass $m$ and kinetic energy $E$ approaches a planet of
-radius $R$ and mass $M$. What is the cross section for the asteroid to
-impact the planet?
-
-### Solution
-
-Calculate the maximum impact parameter, $b_{\rm max}$, for which the asteroid will hit the planet. The total cross  section for impact is $\sigma_{\rm impact}=\pi b_{\rm max}^2$. The maximum cross-section can be found with the help of angular momentum conservation. The asteroid's incoming momentum is $p_0=\sqrt{2mE}$ and the angular momentum is $L=p_0b$. If the asteroid just grazes the planet, it is moving with zero radial kinetic energy at impact. Combining energy and angular momentum conservation and having $p_f$ refer to the momentum of the asteroid at a distance $R$,
-
-$$
-\begin{eqnarray*}
-\frac{p_f^2}{2m}-\frac{GMm}{R}&=&E,\\
-p_fR&=&p_0b_{\rm max},
-\end{eqnarray*}
-$$
-
-allows one to solve for $b_{\rm max}$,
-
-$$
-\begin{eqnarray*}
-b_{\rm max}&=&R\frac{p_f}{p_0}\\
-&=&R\frac{\sqrt{2m(E+GMm/R)}}{\sqrt{2mE}}\\
-\sigma_{\rm impact}&=&\pi R^2\frac{E+GMm/R}{E}.
-\end{eqnarray*}
-$$
-
-## Rutherford Scattering
-
-This refers to the calculation of $d\sigma/d\Omega$ due to an inverse
-square force, $F_{12}=\pm\alpha/r^2$ for repulsive/attractive
-interaction. Rutherford compared the scattering of $\alpha$ particles
-($^4$He nuclei) off of a nucleus and found the scattering angle at
-which the formula began to fail. This corresponded to the impact
-parameter for which the trajectories would strike the nucleus. This
-provided the first measure of the size of the atomic nucleus. At the
-time, the distribution of the positive charge (the protons) was
-considered to be just as spread out amongst the atomic volume as the
-electrons. After Rutherford's experiment, it was clear that the radius
-of the nucleus tended to be roughly 4 orders of magnitude smaller than
-that of the atom, which is less than the size of a football relative
-to Spartan Stadium.
-
-
-
-The incoming and outgoing angles of the trajectory are at
-$\pm\phi'$. They are related to the scattering angle by
-$2\phi'=\pi+\phi_s$.
-
-In order to calculate differential cross section, we must find how the
-impact parameter is related to the scattering angle. This requires
-analysis of the trajectory. We consider our previous expression for
-the trajectory where we derived the elliptic form for the trajectory,
-Eq. ([9](#eq:Ctrajectory)). For that case we considered an attractive
-force with the particle's energy being negative, i.e. it was
-bound. However, the same form will work for positive energy, and
-repulsive forces can be considered by simple flipping the sign of
-$\alpha$. For positive energies, the trajectories will be hyperbolas,
-rather than ellipses, with the asymptotes of the trajectories
-representing the directions of the incoming and outgoing
-tracks. Rewriting Eq. ([9](#eq:Ctrajectory)),
-
-<!-- Equation labels as ordinary links -->
-<div id="eq:ruthtraj"></div>
-
-$$
-\begin{equation}\label{eq:ruthtraj} \tag{15}
-r=\frac{1}{\frac{m\alpha}{L^2}+A\cos\phi}.
-\end{equation}
-$$
-
-Once $A$ is large enough, which will happen when the energy is
-positive, the denominator will become negative for a range of
-$\phi$. This is because the scattered particle will never reach
-certain angles. The asymptotic angles $\phi'$ are those for which
-the denominator goes to zero,
-
-<!-- Equation labels as ordinary links -->
-<div id="_auto10"></div>
-
-$$
-\begin{equation}
-\cos\phi'=-\frac{m\alpha}{AL^2}.
-\label{_auto10} \tag{16}
-\end{equation}
-$$
-
-The trajectory's point of closest approach is at $\phi=0$ and the
-two angles $\phi'$, which have this value of $\cos\phi'$, are the
-angles of the incoming and outgoing particles. From
-Fig (**to come**), one can see that the scattering angle
-$\phi_s$ is given by,
-
-<!-- Equation labels as ordinary links -->
-<div id="eq:sthetover2"></div>
-
-$$
-\begin{eqnarray}
-\label{eq:sthetover2} \tag{17}
-2\phi'-\pi&=&\phi_s,~~~\phi'=\frac{\pi}{2}+\frac{\phi_s}{2},\\
-\nonumber
-\sin(\phi_s/2)&=&-\cos\phi'\\
-\nonumber
-&=&\frac{m\alpha}{AL^2}.
-\end{eqnarray}
-$$
-
-Now that we have $\phi_s$ in terms of $m,\alpha,L$ and $A$, we wish
-to re-express $L$ and $A$ in terms of the impact parameter $b$ and the
-energy $E$. This will set us up to calculate the differential cross
-section, which requires knowing $db/d\phi_s$. It is easy to write
-the angular momentum as
-
-<!-- Equation labels as ordinary links -->
-<div id="_auto11"></div>
-
-$$
-\begin{equation}
-L^2=p_0^2b^2=2mEb^2.
-\label{_auto11} \tag{18}
-\end{equation}
-$$
-
-Finding $A$ is more complicated. To accomplish this we realize that
-the point of closest approach occurs at $\phi=0$, so from
-Eq. ([15](#eq:ruthtraj))
-
-<!-- Equation labels as ordinary links -->
-<div id="eq:rminofA"></div>
-
-$$
-\begin{eqnarray}
-\label{eq:rminofA} \tag{19}
-\frac{1}{r_{\rm min}}&=&\frac{m\alpha}{L^2}+A,\\
-\nonumber
-A&=&\frac{1}{r_{\rm min}}-\frac{m\alpha}{L^2}.
-\end{eqnarray}
-$$
-
-Next, $r_{\rm min}$ can be found in terms of the energy because at the
-point of closest approach the kinetic energy is due purely to the
-motion perpendicular to $\hat{r}$ and
-
-<!-- Equation labels as ordinary links -->
-<div id="_auto12"></div>
-
-$$
-\begin{equation}
-E=-\frac{\alpha}{r_{\rm min}}+\frac{L^2}{2mr_{\rm min}^2}.
-\label{_auto12} \tag{20}
-\end{equation}
-$$
-
-One can solve the quadratic equation for $1/r_{\rm min}$,
-
-<!-- Equation labels as ordinary links -->
-<div id="_auto13"></div>
-
-$$
-\begin{equation}
-\frac{1}{r_{\rm min}}=\frac{m\alpha}{L^2}+\sqrt{(m\alpha/L^2)^2+2mE/L^2}.
-\label{_auto13} \tag{21}
-\end{equation}
-$$
-
-We can plug the expression for $r_{\rm min}$ into the expression for $A$, Eq. ([19](#eq:rminofA)),
-
-<!-- Equation labels as ordinary links -->
-<div id="_auto14"></div>
-
-$$
-\begin{equation}
-A=\sqrt{(m\alpha/L^2)^2+2mE/L^2}=\sqrt{(\alpha^2/(4E^2b^4)+1/b^2}
-\label{_auto14} \tag{22}
-\end{equation}
-$$
-
-Finally, we insert the expression for $A$ into that for the scattering angle, Eq. ([17](#eq:sthetover2)),
-
-<!-- Equation labels as ordinary links -->
-<div id="eq:scattangle"></div>
-
-$$
-\begin{eqnarray}
-\label{eq:scattangle} \tag{23}
-\sin(\phi_s/2)&=&\frac{m\alpha}{AL^2}\\
-\nonumber
-&=&\frac{a}{\sqrt{a^2+b^2}}, ~~a\equiv \frac{\alpha}{2E}
-\end{eqnarray}
-$$
-
-The differential cross section can now be found by differentiating the
-expression for $\phi_s$ with $b$,
-
-<!-- Equation labels as ordinary links -->
-<div id="eq:rutherford"></div>
-
-$$
-\begin{eqnarray}
-\label{eq:rutherford} \tag{24}
-\frac{1}{2}\cos(\phi_s/2)d\phi_s&=&\frac{ab~db}{(a^2+b^2)^{3/2}}=\frac{bdb}{a^2}\sin^3(\phi_s/2),\\
-\nonumber
-d\sigma&=&2\pi bdb=\frac{\pi a^2}{\sin^3(\phi_s/2)}\cos(\phi_s/2)d\phi_s\\
-\nonumber
-&=&\frac{\pi a^2}{2\sin^4(\phi_s/2)}\sin\phi_s d\phi_s\\
-\nonumber
-\frac{d\sigma}{d\cos\phi_s}&=&\frac{\pi a^2}{2\sin^4(\phi_s/2)},\\
-\nonumber
-\frac{d\sigma}{d\Omega}&=&\frac{a^2}{4\sin^4(\phi_s/2)}.
-\end{eqnarray}
-$$
-
-where $a= \alpha/2E$. This the Rutherford formula for the differential
-cross section. It diverges as $\phi_s\rightarrow 0$ because
-scatterings with arbitrarily large impact parameters still scatter to
-arbitrarily small scattering angles. The expression for
-$d\sigma/d\Omega$ is the same whether the interaction is positive or
-negative.
-
-
-Consider a particle of mass $m$ and charge $z$ with kinetic energy $E$
-(Let it be the center-of-mass energy) incident on a heavy nucleus of
-mass $M$ and charge $Z$ and radius $R$. Find the angle at which the
-Rutherford scattering formula breaks down.
-
-### Solution
-
-Let $\alpha=Zze^2/(4\pi\epsilon_0)$. The scattering angle in Eq. ([23](#eq:scattangle)) is
-
-$$
-\sin(\phi_s/2)=\frac{a}{\sqrt{a^2+b^2}}, ~~a\equiv \frac{\alpha}{2E}.
-$$
-
-The impact parameter $b$ for which the point of closest approach
-equals $R$ can be found by using angular momentum conservation,
-
-$$
-\begin{eqnarray*}
-p_0b&=&b\sqrt{2mE}=Rp_f=R\sqrt{2m(E-\alpha/R)},\\
-b&=&R\frac{\sqrt{2m(E-\alpha/R)}}{\sqrt{2mE}}\\
-&=&R\sqrt{1-\frac{\alpha}{ER}}.
-\end{eqnarray*}
-$$
-
-Putting these together
-
-$$
-\phi_s=2\sin^{-1}\left\{
-\frac{a}{\sqrt{a^2+R^2(1-\alpha/(RE))}}
-\right\},~~~a=\frac{\alpha}{2E}.
-$$
-
-It was from this departure of the experimentally measured
-$d\sigma/d\Omega$ from the Rutherford formula that allowed Rutherford
-to infer the radius of the gold nucleus, $R$.
-
-
-
-Just like electrodynamics, one can define "fields", which for a small
-additional mass $m$ are the force per mass and the additional
-potential energy per mass. The {\it gravitational field} related to
-the force has dimensions of force per mass, or acceleration, and can
-be labeled $\boldsymbol{g}(\boldsymbol{r})$. The potential energy per mass has
-dimensions of energy per mass. This is analogous to the
-electromagnetic potential, which is the potential energy per charge,
-and the electric field which is the force per charge.
-
-Because the field $\boldsymbol{g}$ obeys the same inverse square law for a
-point mass as the electric field does for a point charge, the
-gravitational field also satisfies a version of Gauss's law,
-
-<!-- Equation labels as ordinary links -->
-<div id="eq:GravGauss"></div>
-
-$$
-\begin{equation}
-\label{eq:GravGauss} \tag{25}
-\oint d\boldsymbol{A}\cdot\boldsymbol{g}=-4\pi GM_{\rm inside}.
-\end{equation}
-$$
-
-Here, $M_{\rm inside}$ is the net mass inside a closed area.
-
-Gauss's law can be understood by considering a nozzle that sprays
-paint in all directions uniformly from a point source. Let $B$ be the
-number of gallons per minute of paint leaving the nozzle. If the
-nozzle is at the center of a sphere of radius $r$, the paint per
-square meter per minute that is deposited on some part of the sphere
-is
-
-$$
-\begin{eqnarray}
-F(r)&=&\frac{B}{4\pi r^2}.
-\end{eqnarray}
-$$
-
-Now, let $F$ also be assigned a direction, so that it becomes a vector
-pointing along the direction of the flying paint. For any surface that
-surrounds the nozzle, not necessarily a sphere, one can state that
-
-<!-- Equation labels as ordinary links -->
-<div id="eq:paint"></div>
-
-$$
-\begin{eqnarray}
-\label{eq:paint} \tag{26}
-\oint \boldsymbol{dA}\cdot\boldsymbol{F}&=&B,
-\end{eqnarray}
-$$
-
-regardless of the shape of the surface. This follows because the rate
-at which paint is deposited on the surface should equal the rate at
-which it leaves the nozzle. The dot product ensures that only the
-component of $\boldsymbol{F}$ into the surface contributes to the deposition
-of paint. Similarly, if $\boldsymbol{F}$ is any radial inverse-square forces,
-that falls as $B/(4\pi r^2)$, then one can apply
-Eq. ([26](#eq:paint)). For gravitational fields, $B/(4\pi)$ is replaced
-by $GM$, and one quickly "derives" Gauss's law for gravity,
-Eq. ([25](#eq:GravGauss)).
-
-
-Consider Earth to have its mass $M$ uniformly distributed in a sphere
-of radius $R$. Find the magnitude of the gravitational acceleration as
-a function of the radius $r$ in terms of the acceleration of gravity
-at the surface $g(R)$. Assume $r<R$, i.e. you are inside the surface.
-
-{\bf Solution}: Take the ratio of Eq. ([25](#eq:GravGauss)) for two radii, $R$ and $r<R$,
-
-$$
-\begin{eqnarray*}
-\frac{4\pi r^2 g(r)}{4\pi R^2 g(R)}&=&\frac{4\pi GM_{\rm inside~r}}{4\pi GM_{\rm inside~R}}\\
-\nonumber
-&=&\frac{r^3}{R^3}\\
-\nonumber
-g(r)&=&g(R)\frac{r}{R}~.
-\end{eqnarray*}
-$$
-
-The potential energy per mass is similar conceptually to the voltage, or electric potential energy per charge, that was studied in electromagnetism, if $V\equiv U/m$, $\boldsymbol{g}=-\nabla V$.
-
-## Tidal Forces
-
-
-Consider a spherical planet of radius $r$ a distance $D$ from another
-body of mass $M$. The magnitude of the force due to $M$ on an small
-object of mass $\delta m$ on surface of the planet can be calculated
-by performing a Taylor expansion about the center of the spherical
-planet.
-
-<!-- Equation labels as ordinary links -->
-<div id="_auto15"></div>
-
-$$
-\begin{equation}
-F=-\frac{GM\delta m}{D^2}+2\frac{GM\delta m}{D^3}\Delta D+\cdots
-\label{_auto15} \tag{27}
-\end{equation}
-$$
-
-If the $z$ direction points toward the large object, $\Delta D$ can be
-referred to as $z$. In the accelerating frame of an observer at the
-center of the planet,
-
-<!-- Equation labels as ordinary links -->
-<div id="_auto16"></div>
-
-$$
-\begin{equation}
-\delta m\frac{d^2 z}{dt^2}=F-\delta ma'+{\rm other~forces~acting~on~} \delta m,
-\label{_auto16} \tag{28}
-\end{equation}
-$$
-
-where $a'$ is the acceleration of the observer. Because $\delta ma'$
-equals the gravitational force on $\delta m$ if it were located at the
-planet's center, one can write
-
-<!-- Equation labels as ordinary links -->
-<div id="_auto17"></div>
-
-$$
-\begin{equation}
-m\frac{d^2z}{dt^2}=2\frac{GM\delta m}{D^3}z+{\rm other~forces~acting~on~}\delta m.
-\label{_auto17} \tag{29}
-\end{equation}
-$$
-
-Here the other forces could represent the forces acting on $\delta m$
-from the spherical planet such as the gravitational force or the
-contact force with the surface. If $\phi$ is the angle w.r.t. the
-$z$ axis, the effective force acting on $\delta m$ is
-
-<!-- Equation labels as ordinary links -->
-<div id="_auto18"></div>
-
-$$
-\begin{equation}
-F_{\rm eff}\approx 2\frac{GM\delta m}{D^3}r\cos\phi\hat{z}+{\rm other~forces~acting~on~}\delta m.
-\label{_auto18} \tag{30}
-\end{equation}
-$$
-
-This first force is the "tidal" force. It pulls objects outward from the center of the object. If the object were covered with water, it would distort the objects shape so that the shape would be elliptical, stretched out along the axis pointing toward the large mass $M$. The force is always along (either parallel or antiparallel to) the $\hat{z}$ direction.
-
-
-Consider the Earth to be a sphere of radius $R$ covered with water,
-with the gravitational acceleration at the surface noted by $g$. Now
-assume that a distant body provides an additional constant
-gravitational acceleration $\boldsymbol{a}$ pointed along the $z$ axis. Find
-the distortion of the radius as a function of $\phi$. Ignore
-planetary rotation and assume $a<<g$.
-
-{\bf Solution}: Because Earth would then accelerate with $a$, the
-field $a$ would seem invisible in the accelerating frame. A tidal
-force would only appear if $a$ depended on position, i.e. $\nabla
-\boldsymbol{a}\ne 0$.
-
-
-
-Now consider that the field is no longer constant, but that instead $a=-kz$ with $|kR|<<g$.
-
-{\bf Solution}: The surface of the planet needs to be at constant
-potential (if the planet is not accelerating). The force per mass,
-$-kz$ is like a spring, and the potential per mass is
-$kz^2/2$. Otherwise water would move to a point of lower
-potential. Thus, the potential energy for a sample mass $\delta m$ is
-
-$$
-\begin{eqnarray*}
-V(R)+\delta m gh(\phi)-\frac{\delta m}{2}kr^2\cos^2\phi={\rm Constant}\\
-V(R)+\delta mgh(\phi)-\frac{\delta m}{2}kR^2\cos^2\phi-\delta m kRh(\phi)\cos^2\phi-\frac{\delta m}{2}kh^2(\phi)\cos^2\phi={\rm Constant}.
-\end{eqnarray*}
-$$
-
-Here, the potential due to the external field is $(1/2)kz^2$ so that $-\nabla U=-kz$. One now needs to solve for $h(\phi)$. Absorbing all the constant terms from both sides of the equation into one constant $C$, and because both $h$ and $kR$ are small, we can through away terms of order $h^2$ or $kRh$. This gives
-
-$$
-\begin{eqnarray*}
-gh(\phi)-\frac{1}{2}kR^2\cos^2\phi&=&C,\\
-h(\phi)&=&\frac{C}{g}+\frac{1}{2g}kR^2\cos^2\phi,\\
-h(\phi)&=&\frac{1}{2g}kR^2(\cos^2\phi-1/3).
-\end{eqnarray*}
-$$
-
-The term with the factor of $1/3$ replaced the constant and was chosen so that the average height of the water would be zero.
-
-The Sun's mass is $27\times 10^6$ the Moon's mass, but the Sun is 390 times further away from Earth as the Sun. What is ratio of the tidal force of the Sun to that of the Moon.
-
-{\bf Solution}: The gravitational force due to an object $M$ a distance $D$ away goes as $M/D^2$, but the tidal force is only the difference of that force over a distance $R$,
-
-$$
-F_{\rm tidal}\propto \frac{M}{D^3}R.
-$$
-
-Therefore the ratio of force is
-
-$$
-\begin{eqnarray*}
-\frac{F_{\rm Sun's~tidal~force}}{F_{\rm Moon's~tidal~force}}
-&=&\frac{M_{\rm sun}/D_{\rm sun}^3}{M_{\rm moon}/D_{\rm moon}^3}\\
-&=&\frac{27\times 10^6}{390^3}=0.46.
-\end{eqnarray*}
-$$
-
-The Moon more strongly affects tides than the Sun.
-
-
-
 ## Exercises
 
 
@@ -2076,12 +1455,12 @@ Let us repeat Euler's method.
 We have a differential equation
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto19"></div>
+<div id="_auto5"></div>
 
 $$
 \begin{equation}
   y'(t_i)=f(t_i,y_i)   
-\label{_auto19} \tag{31}
+\label{_auto5} \tag{10}
 \end{equation}
 $$
 
@@ -2092,7 +1471,7 @@ and if we truncate at the first derivative, we have from the Taylor expansion
 
 $$
 \begin{equation}
-   y_{i+1}=y(t_i) + (\Delta t) f(t_i,y_i) + O(\Delta t^2), \label{eq:euler} \tag{32}
+   y_{i+1}=y(t_i) + (\Delta t) f(t_i,y_i) + O(\Delta t^2), \label{eq:euler} \tag{11}
 \end{equation}
 $$
 
@@ -2115,24 +1494,24 @@ at $v_0$. A simple variation is to determine $x_{n+1}$ using the velocity at
 $v_{n+1}$, that is (in a slightly more generalized form)
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto20"></div>
+<div id="_auto6"></div>
 
 $$
 \begin{equation} 
    y_{n+1}=y_{n}+ v_{n+1}+O(\Delta t^2)
-\label{_auto20} \tag{33}
+\label{_auto6} \tag{12}
 \end{equation}
 $$
 
 and
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto21"></div>
+<div id="_auto7"></div>
 
 $$
 \begin{equation}
    v_{n+1}=v_{n}+(\Delta t) a_{n}+O(\Delta t^2).
-\label{_auto21} \tag{34}
+\label{_auto7} \tag{13}
 \end{equation}
 $$
 
@@ -2890,66 +2269,66 @@ centrifugal barrier pushes the object farther away from the origin.
 Alternatively,
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto22"></div>
+<div id="_auto8"></div>
 
 $$
 \begin{equation}
 -\frac{dV_{\text{eff}}(r)}{dr} = \mu \ddot{r}  =-\frac{dV(r)}{dr}+\mu\dot{\phi}^2r
-\label{_auto22} \tag{35}
+\label{_auto8} \tag{14}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto23"></div>
+<div id="_auto9"></div>
 
 $$
 \begin{equation} 
 -\frac{dV_{\text{eff}}(r)}{dr}  = -\frac{dV(r)}{dr}+\mu\left( \frac{L}{\mu r^2}\right) ^2r
-\label{_auto23} \tag{36}
+\label{_auto9} \tag{15}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto24"></div>
+<div id="_auto10"></div>
 
 $$
 \begin{equation} 
  = -\frac{dV(r)}{dr}+\mu\frac{L^2}{\mu}r^{-3}
-\label{_auto24} \tag{37}
+\label{_auto10} \tag{16}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto25"></div>
+<div id="_auto11"></div>
 
 $$
 \begin{equation} 
  = -\frac{d\left(  V(r)+\frac{1}{2} \frac{L^2}{\mu r^2}\right) }{dr}.
-\label{_auto25} \tag{38}
+\label{_auto11} \tag{17}
 \end{equation}
 $$
 
 Integrating we obtain
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto26"></div>
+<div id="_auto12"></div>
 
 $$
 \begin{equation}
 V_{\text{eff}}(r) = V(r) + \frac{L^2}{2\mu r^2} + C
-\label{_auto26} \tag{39}
+\label{_auto12} \tag{18}
 \end{equation}
 $$
 
 Imposing  the extra condition that $V_{\text{eff}}(r\rightarrow \infty) = V(r\rightarrow \infty)$,
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto27"></div>
+<div id="_auto13"></div>
 
 $$
 \begin{equation}
 V_{\text{eff}}(r) = V(r) + \frac{L^2}{2\mu r^2}
-\label{_auto27} \tag{40}
+\label{_auto13} \tag{19}
 \end{equation}
 $$
 
@@ -3143,122 +2522,122 @@ $$
 We start with $r^2 & = x^2+y^2$ and square the above analytical solutions and   after some **exciting algebraic manipulations** we arrive at
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto28"></div>
+<div id="_auto14"></div>
 
 $$
 \begin{equation}
 r^2  = x^2+y^2
-\label{_auto28} \tag{41}
+\label{_auto14} \tag{20}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto29"></div>
+<div id="_auto15"></div>
 
 $$
 \begin{equation}  
  = \left(  A\cos\omega_0 t+B\sin\omega_0 t\right) ^2 + \left(  C\cos\omega_0 t+D\sin\omega_0 t\right) ^2
-\label{_auto29} \tag{42}
+\label{_auto15} \tag{21}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto30"></div>
+<div id="_auto16"></div>
 
 $$
 \begin{equation}  
  = A^2\cos^2\omega_0 t+B^2\sin^2\omega_0 t + 2AB\sin\omega_0 t \cos\omega_0 t + C^2\cos^2\omega_0 t+D^2\sin^2\omega_0 t + 2CD\sin\omega_0 t \cos\omega_0 t
-\label{_auto30} \tag{43}
+\label{_auto16} \tag{22}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto31"></div>
+<div id="_auto17"></div>
 
 $$
 \begin{equation} 
  = (A^2+C^2)\cos^2\omega_0 t + (B^2+D^2)\sin^2\omega_0 t + 2(AC + BD)\sin\omega_0 t \cos\omega_0 t
-\label{_auto31} \tag{44}
+\label{_auto17} \tag{23}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto32"></div>
+<div id="_auto18"></div>
 
 $$
 \begin{equation} 
  = (B^2+D^2) + (A^2+C^2-B^2-D^2)\cos^2\omega_0 t + 2(AC + BD)2\sin2\omega_0 t
-\label{_auto32} \tag{45}
+\label{_auto18} \tag{24}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto33"></div>
+<div id="_auto19"></div>
 
 $$
 \begin{equation} 
  = (B^2+D^2) + (A^2+C^2-B^2-D^2)\frac{1+\cos{2\omega_0 t}}{2} + 2(AC + BD)\frac{1}{2}\sin2\omega_0 t
-\label{_auto33} \tag{46}
+\label{_auto19} \tag{25}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto34"></div>
+<div id="_auto20"></div>
 
 $$
 \begin{equation} 
  = \frac{2B^2+2D^2+A^2+C^2-B^2-D^2}{2} + (A^2+C^2-B^2-D^2)\frac{\cos{2\omega_0 t}}{2} + (AC + BD)\sin2\omega_0 t
-\label{_auto34} \tag{47}
+\label{_auto20} \tag{26}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto35"></div>
+<div id="_auto21"></div>
 
 $$
 \begin{equation} 
  = \frac{B^2+D^2+A^2+C^2}{2} + \frac{A^2+C^2-B^2-D^2}{2}\cos{2\omega_0 t} + (AC + BD)\sin2\omega_0 t
-\label{_auto35} \tag{48}
+\label{_auto21} \tag{27}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto36"></div>
+<div id="_auto22"></div>
 
 $$
 \begin{equation} 
  = \alpha + \beta\cos{2\omega_0 t} + \gamma\sin2\omega_0 t
-\label{_auto36} \tag{49}
+\label{_auto22} \tag{28}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto37"></div>
+<div id="_auto23"></div>
 
 $$
 \begin{equation} 
  = \alpha + \sqrt{\beta^2+\gamma^2}\left( \frac{\beta}{\sqrt{\beta^2+\gamma^2}}\cos{2\omega_0 t} + \frac{\gamma}{\sqrt{\beta^2+\gamma^2}}\sin2\omega_0 t\right) 
-\label{_auto37} \tag{50}
+\label{_auto23} \tag{29}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto38"></div>
+<div id="_auto24"></div>
 
 $$
 \begin{equation} 
  = \alpha + \sqrt{\beta^2+\gamma^2}\left( \cos{\delta}\cos{2\omega_0 t} + \sin{\delta}\sin2\omega_0 t\right) 
-\label{_auto38} \tag{51}
+\label{_auto24} \tag{30}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto39"></div>
+<div id="_auto25"></div>
 
 $$
 \begin{equation} 
  = \alpha + \sqrt{\beta^2+\gamma^2}\cos{\left( 2\omega_0 t - \delta\right) },
-\label{_auto39} \tag{52}
+\label{_auto25} \tag{31}
 \end{equation}
 $$
 
@@ -3547,105 +2926,105 @@ Here $V(r)$ is any central force which depends only on the relative coordinate.
 Find the radius of a circular orbit by solving for the position of the minimum of the effective potential.
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto40"></div>
+<div id="_auto26"></div>
 
 $$
 \begin{equation}
 \frac{1}{m}\frac{dV(r)}{dr}  = r\dot{\phi}^2
-\label{_auto40} \tag{53}
+\label{_auto26} \tag{32}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto41"></div>
+<div id="_auto27"></div>
 
 $$
 \begin{equation}  \frac{1}{m}\left( -\frac{-\alpha}{r^2}\right)   = r \frac{L^2}{m^2r^4}
-\label{_auto41} \tag{54}
+\label{_auto27} \tag{33}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto42"></div>
+<div id="_auto28"></div>
 
 $$
 \begin{equation}  \frac{\alpha}{mr^2}  = \frac{L^2}{m^2r^3}
-\label{_auto42} \tag{55}
+\label{_auto28} \tag{34}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto43"></div>
+<div id="_auto29"></div>
 
 $$
 \begin{equation}  r  = \frac{L^2}{m\alpha}
-\label{_auto43} \tag{56}
+\label{_auto29} \tag{35}
 \end{equation}
 $$
 
 At the minimum, the radial velocity is zero and it is only the [centripetal velocity](https://en.wikipedia.org/wiki/Centripetal_force) which is nonzero. This implies that $\ddot{r}=0$.  What is the angular frequency, $\dot{\theta}$, of the orbit? Solve this by setting $\ddot{r}=0=F/m+\dot{\theta}^2r$.
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto44"></div>
+<div id="_auto30"></div>
 
 $$
 \begin{equation}
 \dot{\theta}^2 r  = - \frac{F}{m}
-\label{_auto44} \tag{57}
+\label{_auto30} \tag{36}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto45"></div>
+<div id="_auto31"></div>
 
 $$
 \begin{equation}  \dot{\theta}^2 r  = - \frac{-\frac{\alpha}{r^2}}{m}
-\label{_auto45} \tag{58}
+\label{_auto31} \tag{37}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto46"></div>
+<div id="_auto32"></div>
 
 $$
 \begin{equation}  \dot{\theta}^2  = \frac{\alpha}{mr^3}
-\label{_auto46} \tag{59}
+\label{_auto32} \tag{38}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto47"></div>
+<div id="_auto33"></div>
 
 $$
 \begin{equation}  \dot{\theta}  = \pm \sqrt{\frac{\alpha}{mr^3}}
-\label{_auto47} \tag{60}
+\label{_auto33} \tag{39}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto48"></div>
+<div id="_auto34"></div>
 
 $$
 \begin{equation}  \dot{\theta}  = \pm \sqrt{\frac{\alpha}{m\frac{L^6}{m^3\alpha^3}}}
-\label{_auto48} \tag{61}
+\label{_auto34} \tag{40}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto49"></div>
+<div id="_auto35"></div>
 
 $$
 \begin{equation}  \dot{\theta}  = \pm \sqrt{\frac{\alpha^4m^2}{L^6}}
-\label{_auto49} \tag{62}
+\label{_auto35} \tag{41}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto50"></div>
+<div id="_auto36"></div>
 
 $$
 \begin{equation}  \dot{\theta}  = \pm \frac{\alpha^2m}{L^3}
-\label{_auto50} \tag{63}
+\label{_auto36} \tag{42}
 \end{equation}
 $$
 
@@ -3660,57 +3039,57 @@ $$
 Therefore, all we have to do is find the second derivative of $V_{\text{eff}}$ around the minimum point of $V_{\text{eff}}$ where $\dot{r} = \ddot{r} = 0$.
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto51"></div>
+<div id="_auto37"></div>
 
 $$
 \begin{equation}
 k  = \frac{d^2V_{\text{eff}}}{dr^2}
-\label{_auto51} \tag{64}
+\label{_auto37} \tag{43}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto52"></div>
+<div id="_auto38"></div>
 
 $$
 \begin{equation}   = \frac{d^2\left( -\frac{\alpha}{r} + \frac{1}{2} \frac{L^2}{mr^2}\right) }{dr^2}
-\label{_auto52} \tag{65}
+\label{_auto38} \tag{44}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto53"></div>
+<div id="_auto39"></div>
 
 $$
 \begin{equation}   = -\frac{2\alpha}{r^3} + \frac{3L^2}{mr^4}
-\label{_auto53} \tag{66}
+\label{_auto39} \tag{45}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto54"></div>
+<div id="_auto40"></div>
 
 $$
 \begin{equation}   = -\frac{2\alpha}{\frac{L^6}{m^3\alpha^3}} + \frac{3L^2}{m\frac{L^8}{m^4\alpha^4}}
-\label{_auto54} \tag{67}
+\label{_auto40} \tag{46}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto55"></div>
+<div id="_auto41"></div>
 
 $$
 \begin{equation}   = -\frac{2m^3\alpha^4}{L^6} + \frac{3m^3\alpha^4}{L^6}
-\label{_auto55} \tag{68}
+\label{_auto41} \tag{47}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto56"></div>
+<div id="_auto42"></div>
 
 $$
 \begin{equation}   = \frac{m^3\alpha^4}{L^6}
-\label{_auto56} \tag{69}
+\label{_auto42} \tag{48}
 \end{equation}
 $$
 
@@ -3731,30 +3110,30 @@ $$
 where
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto57"></div>
+<div id="_auto43"></div>
 
 $$
 \begin{equation}
 \omega =  \sqrt{\frac{k}{m}}
-\label{_auto57} \tag{70}
+\label{_auto43} \tag{49}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto58"></div>
+<div id="_auto44"></div>
 
 $$
 \begin{equation}   = \sqrt{\frac{m^2\alpha^4}{L^6}} 
-\label{_auto58} \tag{71}
+\label{_auto44} \tag{50}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto59"></div>
+<div id="_auto45"></div>
 
 $$
 \begin{equation}   = \frac{m\alpha^2}{L^3}
-\label{_auto59} \tag{72}
+\label{_auto45} \tag{51}
 \end{equation}
 $$
 
@@ -3784,125 +3163,125 @@ $$
 Show that for this case the total energy $E$ approaches zero.
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto60"></div>
+<div id="_auto46"></div>
 
 $$
 \begin{equation}
 E  = - \frac{\alpha}{r} + \frac{1}{2} m \left(  (\dot{\theta}r)^2+\dot{r}^2\right) 
-\label{_auto60} \tag{73}
+\label{_auto46} \tag{52}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto61"></div>
+<div id="_auto47"></div>
 
 $$
 \begin{equation}   = - \frac{\alpha}{r} + \frac{1}{2} m \left[  \left( \frac{L}{mr^2}r\right) ^2+\left( \frac{dr}{d\theta}\dot{\theta}\right) ^2\right] 
-\label{_auto61} \tag{74}
+\label{_auto47} \tag{53}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto62"></div>
+<div id="_auto48"></div>
 
 $$
 \begin{equation}   = - \frac{\alpha}{2r_0}(1+\cos\theta) + \frac{1}{2} m \left[  \left( \frac{L(1+\cos\theta)}{2mr_0}\right) ^2+\left( 2r_0\frac{-1}{(1+\cos\theta)^2}(-\sin\theta)\frac{L}{mr^2}\right) ^2\right] 
-\label{_auto62} \tag{75}
+\label{_auto48} \tag{54}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto63"></div>
+<div id="_auto49"></div>
 
 $$
 \begin{equation}   = - \frac{\alpha}{2r_0}(1+\cos\theta) + \frac{1}{2} m \left[  \left( \frac{L(1+\cos\theta)}{2mr_0}\right) ^2+\left( 2r_0\frac{-1}{(1+\cos\theta)^2}(-\sin\theta)\frac{L(1+\cos\theta)^2}{4mr_0^2}\right) ^2\right] 
-\label{_auto63} \tag{76}
+\label{_auto49} \tag{55}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto64"></div>
+<div id="_auto50"></div>
 
 $$
 \begin{equation}   = - \frac{\alpha}{2r_0}(1+\cos\theta) + 
 \frac{1}{2} m \left[  \left( \frac{L(1+\cos\theta)}{2mr_0}\right) ^2+\left( \sin\theta\frac{L}{2mr_0}\right) ^2\right] 
-\label{_auto64} \tag{77}
+\label{_auto50} \tag{56}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto65"></div>
+<div id="_auto51"></div>
 
 $$
 \begin{equation}   = - \frac{\alpha}{2r_0}(1+\cos\theta) + 
 \frac{1}{2} m \left[  \left( \frac{L(1+\cos\theta)}{2mr_0}\right) ^2+\left( \sin\theta\frac{L}{2mr_0}\right) ^2\right] 
-\label{_auto65} \tag{78}
+\label{_auto51} \tag{57}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto66"></div>
+<div id="_auto52"></div>
 
 $$
 \begin{equation}   = - \frac{\alpha}{2r_0}(1+\cos\theta) + 
 \frac{1}{2} m \frac{L^2}{4m^2r_0^2} \left[  \left( 1+\cos\theta\right) ^2+\left( \sin\theta\right) ^2\right] 
-\label{_auto66} \tag{79}
+\label{_auto52} \tag{58}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto67"></div>
+<div id="_auto53"></div>
 
 $$
 \begin{equation}   = - \frac{\alpha}{2r_0}(1+\cos\theta) + 
 \frac{1}{2} \frac{L^2}{4mr_0^2} \left(  1 + \cos^2\theta + 2\cos \theta + \sin^2\theta\right) 
-\label{_auto67} \tag{80}
+\label{_auto53} \tag{59}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto68"></div>
+<div id="_auto54"></div>
 
 $$
 \begin{equation}   = - \frac{\alpha}{2r_0}(1+\cos\theta) + 
 \frac{1}{2} \frac{L^2}{4mr_0^2} \left(  2 + 2\cos \theta \right) 
-\label{_auto68} \tag{81}
+\label{_auto54} \tag{60}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto69"></div>
+<div id="_auto55"></div>
 
 $$
 \begin{equation}   = (1+\cos\theta) \left( - \frac{\alpha}{2r_0} + \frac{L^2}{4mr_0^2}\right) 
-\label{_auto69} \tag{82}
+\label{_auto55} \tag{61}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto70"></div>
+<div id="_auto56"></div>
 
 $$
 \begin{equation}   = (1+\cos\theta) \left( - \frac{\alpha}{2\frac{L^2}{2m\alpha}} + \frac{L^2}{4m\frac{L^4}{4m^2\alpha^2}}\right) 
-\label{_auto70} \tag{83}
+\label{_auto56} \tag{62}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto71"></div>
+<div id="_auto57"></div>
 
 $$
 \begin{equation}   = (1+\cos\theta) \left( - \frac{m\alpha^2}{L^2} + \frac{m\alpha^2}{L^2}\right) 
-\label{_auto71} \tag{84}
+\label{_auto57} \tag{63}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto72"></div>
+<div id="_auto58"></div>
 
 $$
 \begin{equation}   = 0
-\label{_auto72} \tag{85}
+\label{_auto58} \tag{64}
 \end{equation}
 $$
 
@@ -3915,22 +3294,22 @@ $$
 We have that
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto73"></div>
+<div id="_auto59"></div>
 
 $$
 \begin{equation}
 x  = r \cos\theta
-\label{_auto73} \tag{86}
+\label{_auto59} \tag{65}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto74"></div>
+<div id="_auto60"></div>
 
 $$
 \begin{equation} 
 y  = r \sin \theta.
-\label{_auto74} \tag{87}
+\label{_auto60} \tag{66}
 \end{equation}
 $$
 
@@ -3989,40 +3368,40 @@ $$
 For a hyperbola, identify the constants $\alpha$, $\beta$ and $\delta$ in terms of the constants $c$ and $\epsilon$ for $r(\phi)$.
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto75"></div>
+<div id="_auto61"></div>
 
 $$
 \begin{equation}
 x  = r\cos\phi
-\label{_auto75} \tag{88}
+\label{_auto61} \tag{67}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto76"></div>
+<div id="_auto62"></div>
 
 $$
 \begin{equation}   = \frac{c\cos\phi}{1+\epsilon\cos\phi}
-\label{_auto76} \tag{89}
+\label{_auto62} \tag{68}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto77"></div>
+<div id="_auto63"></div>
 
 $$
 \begin{equation}
 y  = r\sin\phi 
-\label{_auto77} \tag{90}
+\label{_auto63} \tag{69}
 \end{equation}
 $$
 
 <!-- Equation labels as ordinary links -->
-<div id="_auto78"></div>
+<div id="_auto64"></div>
 
 $$
 \begin{equation}   = \frac{c\sin\phi}{1+\epsilon\cos\phi}
-\label{_auto78} \tag{91}
+\label{_auto64} \tag{70}
 \end{equation}
 $$
 

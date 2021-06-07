@@ -1,6 +1,6 @@
 # Book settings
-title: Classical mechanics
-author: Morten Hjorth-Jensen and Scott Pratt
+title: From Classical Mechanics to Quantum Mechanics, a Computational approach
+author: Julie Butler and Morten Hjorth-Jensen
 logo: logo.png
 
 latex:
@@ -8,7 +8,7 @@ latex:
     targetname: book.tex
 
 repository:
-  url                       : https://github.com/mhjensen/Physics321/doc/LectureNotes/_build/html/index.html
+  url                       : https://compphysics.github.io/InsightPhysicsImmersionWeek/docs/src/LectureNotes/_build/html/index.html
 
 html:
   use_repository_button: true

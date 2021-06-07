@@ -3,18 +3,12 @@
   chapters:
   - file: schedule
   - file: teachers
-  - file: textbooks
-- part: Introductory Material
+- part: Classical Mechanics and Python Review
   numbered: true
   chapters:
   - file: chapter1.ipynb
   - file: chapter2.ipynb
   - file: chapter3.ipynb
   - file: chapter4.ipynb
-- part: Advanced Topics
-  numbered: true
-  chapters:
   - file: chapter5.ipynb
   - file: chapter6.ipynb
-  - file: chapter7.ipynb
-  - file: chapter8.ipynb  
