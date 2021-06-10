@@ -3,7 +3,7 @@
 This GitHub repository contains all teaching material relevant for the Physics Immersion week of the Insight program.  The aim is to give you an introduction on how to use Python programming and numerical methods (parts of Computational Science) to solve physics problems, starting with problems from classical mechanics and moving to solving quantum mechanics problems by the end of the week.
 
 ## Assumed Knowledge 
-We assume you have a basic knowledge of calculus and classical mechanics (such as harmonic oscillations, two-body problems like the Earth-Sun problem and similar).  However, a review of these topics will be provided in the pre-reading assignments. Any student who does not feel confident in their knowledge of these topics after reviewing the pre-reading assignments should contact the lectures (Julie Butler: butle222@msu.edu or Morten Hjorth-Jensen: hjensen@msu.edu).
+We assume you have a basic knowledge of calculus and classical mechanics (such as harmonic oscillations, two-body problems like the Earth-Sun problem and similar).  However, a review of these topics will be provided in the pre-course assignments. Any student who does not feel confident in their knowledge of these topics after reviewing the pre-course assignments should contact the lectures (Julie Butler: butle222@msu.edu or Morten Hjorth-Jensen: hjensen@msu.edu).
 
 We do not assume you have had any exposure to linear algebra, quantum mechanics, or Python programming.  Any skills from these fields that are needed for this week will be introduced and explained in terms of more basic physics or mathematics.  Python tutorials will be provided as assignments in the pre-reading, but if you have a good grasp of Python, you can skip these assignments.
 
@@ -15,24 +15,28 @@ We do not assume you have had any exposure to linear algebra, quantum mechanics,
 * Students should be able to describe the difference between classical mechanics and quantum mechanics and be able to determine what methodology to use when encountering a new physical system.  Students should also be able to demstrate how the classical two-body problem and the classical harmonic oscillator can be extended to quantum mechanical problems.
 
 
-## Pre-reading assignments 
+## Pre-course assignments 
+
+These assignments should be completed before the first class meets on June 21st.  These assignments will not be turned into the lecturers for a grade but the material presented for the week will assume you have completed and understood these assignements.  If you have any trouble completing these assignments, please contact the lecturers (Julie Butler: butle222@msu.edu or Morten Hjorth-Jensen: hjensen@msu.edu).
+
 ### Physics skills: 
 Review of classical mechanics concepts like 
-- equations of motion, 
-- forces and potentials, 
-- two-body problems, harmomic oscillations and 
-- conserved quantities.
+- Newton's laws and the basic equations of motion
+- Forces, potentials, and how they are related
+- Two-body problems, especially the Earth-Sun system
+- Harmomic Oscillator
 
 Suggested readings and pre-recorded lectures will be added soon.  We will be working out of the Taylor's classical mechanics textbook (a PDF copy will be provided) but you can use any classical mechanics textbook you feel comfortable with that covers the same material.
 
 ### Computational Science skills:
-- Introduction ot Python, if-else, loops, if-while, arrays etc
-- Numerical algorithms for solving ordinary differential equations like Euler's method, Euler-Cromer and Velocity Verlet
-- Extremely useful Python-libraries like Numpy, MatplotLib, Pandas and other.
+We assume that you have no knowledge of the Python programming language coming into this week and have prepared a series of four tutorials covering basic concepts.  If you have already had a course on Python, feel free to skip over any material you know.  The knowledge gained through these notebooks will be useful for class on Monday, June 21.
 
-### Homework assignment:
-- Write a program that finds the height as function of time for a falling object with and without viscous drag.
-- Write a program that models a ball being kicked
+* [Document 1: Python Programming and Notebooks](docs/src/JuliesMaterial/PreCoursePythonNotebooks.md)
+* [Notebook 1: Introduction to Scientific Python](docs/src/JuliesMaterial/PreCourseNotebook1.ipynb)
+* [Notebook 2: NumPy for Scientific Python](docs/src/JuliesMaterial/PreCourseNotebook2.ipynb)
+* [Notebook 3: Matplotlib for Scientific Python](docs/src/JuliesMaterial/PreCourseNotebook3.ipynb)
+* [Notebook 4: Doing Physics With Python ](docs/src/JuliesMaterial/PreCourseNotebook4.ipynb)(includes a basic review of classical mechanics)
+
 
 ## Schedule
 ### Monday June 21, 10am-1pm EDT/7am-10am PDT (Instructor: Julie)
