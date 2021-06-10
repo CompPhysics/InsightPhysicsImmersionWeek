@@ -11,7 +11,9 @@ Review of classical mechanics concepts like
 - forces and potentials, 
 - two-body problems, harmomic oscillations and 
 - conserved quantities.
+- 
 Suggested readings and pre-recorded lectures will be added soon.  We will be working out of the Taylor's Classical Mechanics textbook (a PDF copy will be provided) but you can use any classical mechanics textbook you feel comfortable with that covers the same material.
+
 ### Computational Science skills:
 - Introduction ot Python, if-else, loops, if-while, arrays etc
 - Numerical algorithms for solving ordinary differential equations like Euler's method, Euler-Cromer and Velocity Verlet
