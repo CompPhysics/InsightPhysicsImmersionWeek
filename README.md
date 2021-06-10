@@ -9,7 +9,7 @@ We do not assume you have had any exposure to linear algebra, quantum mechanics,
 
 ## Desired Learning Outcomes for the Week
 * Students should feel confident in their knowledge of the central features of the Python programming language including basic uses of the libraries NumPy and Matplotlib.
-* * Studens should be able to solve basic linear algebra problems invovling multiplication, eigenvalues, and eigenvectors.
+* Studens should be able to solve basic linear algebra problems invovling multiplication, eigenvalues, and eigenvectors.
 * Students should be able to apply their knowledge of Python to create program which model physical systems (both classical and quantum) using numerical methods such as Velocity-Verlet or by finding eigenvalues computationally.
 * Students should demonstrate a basic knowledge of quantum mechanics including the ability to solve simple quantum mechanical problems such as the infinite well and the harmonic oscillator.
 * Students should be able to describe the difference between classical mechanics and quantum mechanics and be able to determine what methodology to use when encountering a new physical system.  Students should also be able to demstrate how the classical two-body problem and the classical harmonic oscillator can be extended to quantum mechanical problems.
