@@ -29,7 +29,7 @@ Review of classical mechanics concepts like
 Suggested readings and pre-recorded lectures will be added soon.  We will be working out of the Taylor's classical mechanics textbook (a PDF copy will be provided) but you can use any classical mechanics textbook you feel comfortable with that covers the same material.
 
 ### Computational Science skills:
-We assume that you have no knowledge of the Python programming language coming into this week and have prepared a series of four tutorials covering basic concepts.  If you have already had a course on Python, feel free to skip over any material you know.  The knowledge gained through these notebooks will be useful for class on Monday, June 21.
+We assume that you have no knowledge of the Python programming language coming into this week and have prepared a series of four tutorials covering basic concepts.  If you have already had a course on Python, feel free to skip over any material you know.  If you are new to learning Python there are some additional resources at the end of Notebook 1 that may also be helpful.  These are longer than the notebooks assigned below but give you a more through introduction to the Python programming language.  The knowledge gained through these notebooks will be useful for class on Monday, June 21.
 
 * [Document 1: Python Programming and Notebooks](docs/src/JuliesMaterial/PreCoursePythonNotebooks.md)
 * [Notebook 1: Introduction to Scientific Python](docs/src/JuliesMaterial/PreCourseNotebook1.ipynb)
