@@ -15,6 +15,19 @@ We do not assume you have had any exposure to linear algebra, quantum mechanics,
 * Students should be able to describe the difference between classical mechanics and quantum mechanics and be able to determine what methodology to use when encountering a new physical system.  Students should also be able to demonstrate how the classical two-body problem and the classical harmonic oscillator can be extended to quantum mechanical problems.
 
 
+## Teaching Staff
+### Instructors
+* Morten Hjorth-Jensen
+* Julie Butler
+* Linda Hlophe
+* Christian Drischler (Slack)
+
+### Teaching Assistants
+* Jane Kim
+* Kang Yu
+* Yani Udiani
+
+
 ## Pre-course assignments
 
 These assignments should be completed before the first class meets on June 21st.  These assignments will not be turned into the lecturers for a grade but the material presented for the week will assume you have completed and understood these assignments.  If you have any trouble completing these assignments, please contact the lecturers (Julie Butler: butle222@msu.edu or Morten Hjorth-Jensen: hjensen@msu.edu).
@@ -98,8 +111,13 @@ We assume that you have no knowledge of the Python programming language coming i
 - Class assignment:
 - Homework Assignment:
 
-### Friday June 25, 10am-1pm EDT/7am-10am PDT (Instructor: TBD)
-- Physics: Harmonic oscillator and interacting two-particle problems
-- Computational: Write a more general code that can handle different physical systems (one and two-particle systems)
-- Class assignment:
-- Homework Assignment:
+### Friday June 25, 10am-1pm EDT/7am-10am PDT (Instructor: Linda, Julie, Morten)
+
+### Class Schedule
+* **10:00-10:30:** Derivation of the harmonic oscillator starting from Hooke's law as well as an overview of Taylor expansions (Linda)
+* **10:30-10:40:** Break with time for questions
+* **10:40-11:10:** Introduction to the quantum harmonic oscillator and how it can be derived from the classical case.  Conceptual introduction to ladder operators and harmonic oscillator states. (Julie)
+* **11:20-11:30:** Break with time for questions
+* **11:30-12:00:** Group Learning Activity - Create a Python program which models the motion of a particle under the influence of the classical harmonic oscillator (hint: think about the eigenvalue method we learning on Wednesday and Thursday) (Morten)
+
+
