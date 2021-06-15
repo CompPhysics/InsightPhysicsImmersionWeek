@@ -62,13 +62,25 @@ We assume that you have no knowledge of the Python programming language coming i
 
 #### Homework Assignment for Tuesday
 * Extend one of the two-body problems discussed in class (Earth-Sun, two electrons, or two nucleons) to a three body problem (Earth-Sun-Moon, three electrons, or three nucleons).  Verify through graphs the the programs gives the expected answers.
+* Review the lecture notes for Tuesday located [here](docs/src/JuliesMaterial/Day2.ipynb).
 
 
 ### Tuesday June 22, 10am-1pm EDT/7am-10am PDT (Instructor: Julie)
-- Physics: Introduction to basic to quantum mechanics concepts
-- Computational/Mathematics: Linear Algebra Introduction (unitary transformation, eigenvalue algorithms, matrices and vectors)
-- Class Assignment: Small practice problems with quantum and linear algebra concepts, writing a Python program to find eigenvalues
-- Homework assignment:
+
+#### Relevant Topics to Review Before Class
+
+#### Class Schedule (10am-12pm EDT, 12pm EDT is set aside as an extra office hour)
+* 10:00-10:30: Lecture on quantum basics
+* 10:30-10:45: Group Learning Acivity - In groups of approximately 4 solve problems based on the material learned in the previous lecture.
+* 10:45-11:40: Lecture on more quantum mechanics basics with an introduction to linear algebra
+* 11:40-12:00: Group Learning Activity - In groups of approximately 4 solve quantum mechanics problems using linear algebra. 
+
+#### Learning Goals for Day
+
+#### Homework Assignment for Wednesday
+* Complete [this activity](docs/src/JuliesMaterials/Day2HW1.md) to review the quantum mechanics and linear algebra concepts learned today.
+* Complete [this notebook](doscs/src/JulieMaterials/Day2HW1.ipynb) which walks you through how to find eigenvalues and eigenvectors in Python.  Keep this code handy because we will be using it on Wednesday and Thursday.
+* Review the lecture notes for Wednesday located [here](link).
 
 ### Wednesday June 23, 10am-1pm EDT/7am-10am PDT (Instructor: Morten)
 - Physics: Classical two-point boundary value problem
