@@ -50,8 +50,8 @@ We assume that you have no knowledge of the Python programming language coming i
 * The Velocity-Verlet Method
 
 #### Class Schedule (10am-12pm EDT, 12pm EDT is set aside as an extra office hour)
-* 10:00-10:15: Q&A on the pre-course assignments (additional questions can be asked during the office hour immediately after class)
-* 10:15-11:00: Lecture on the classical two-body problem and how to translate a two-body problem to Python code
+* 10:00-10:30: Introduction to the course and Q&A on the pre-course assignments (additional questions can be asked during the office hour immediately after class)
+* 10:30-11:00: Lecture on the classical two-body problem and how to translate a two-body problem to Python code
 * 11:00-12:00: Group Learning Activity - In groups of approximately 4 create a Python code that models the Earth-Sun two-body system.  Once correct, try to extend the problem to model two electrons, and finally two nucleons.  A more detailed problem statement can be found [here](docs/src/JuliesMaterial/Day1Activity.md).  (TO-DO: Add document) Questions can be asked about the project during class and after class during the office hour.
 
 #### Learning Goals for Day
@@ -70,18 +70,20 @@ We assume that you have no knowledge of the Python programming language coming i
 #### Relevant Topics to Review Before Class
 * Basics statistics such as averages and standard deviations
 * Derivatives and integrals in one or more variables
+* Complex numbers, complex conjugates, etc.
 
 #### Class Schedule (10am-12pm EDT, 12pm EDT is set aside as an extra office hour)
-* 10:00-10:30: Lecture on quantum basics
-* 10:30-10:45: Group Learning Acivity - In groups of approximately 4 solve problems based on the material learned in the previous lecture.
-* 10:45-11:40: Lecture on more quantum mechanics basics with an introduction to linear algebra
-* 11:40-12:00: Group Learning Activity - In groups of approximately 4 solve quantum mechanics problems using linear algebra. 
+* 10:00-10:50: Lecture on the the breakdown of classical mechanics and the basics of quantum mechanics including an introduction to wave-particle duality and uncertainity and why we need probabilities in quantum mechanics.
+* 10:50-11:00: Break with time for questions
+* 11:00-11:50: Lecture on more quantum mechanics basics with an introduction to linear algebra and how quantum mechanics can be formulated as a linear algebra problem.  
+* 11:50-12:00: Q&A session and homework help (Monday or Tuesday homework).  Can be extended into the 12pm-1pm office hour time slot. 
+* A series of short questions will be asked and discussed during the lectures to help you check your understanding of the material.  
 
 #### Learning Goals for Day
 
 #### Homework Assignment for Wednesday
-* Complete [this activity](docs/src/JuliesMaterials/Day2HW1.md) t(TO-DO: Add document)o review the quantum mechanics and linear algebra concepts learned today.
-* Complete [this notebook](doscs/src/JulieMaterials/Day2HW1.ipynb) (TO-DO: Add document)which walks you through how to find eigenvalues and eigenvectors in Python.  Keep this code handy because we will be using it on Wednesday and Thursday.
+* Complete [this activity](docs/src/JuliesMaterials/Day2HW1.md) (TO-DO: Add document) to review the quantum mechanics and linear algebra concepts learned today.
+* Complete [this notebook](doscs/src/JulieMaterials/Day2HW1.ipynb) (TO-DO: Add document) which walks you through how to find eigenvalues and eigenvectors in Python.  Keep this code handy because we will be using it on Wednesday and Thursday.
 * Review the lecture notes for Wednesday located [here](link). (TO-DO: Add document (MORTEN))
 
 ### Wednesday June 23, 10am-1pm EDT/7am-10am PDT (Instructor: Morten)
