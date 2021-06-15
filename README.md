@@ -64,17 +64,18 @@ We assume that you have no knowledge of the Python programming language coming i
 * Extend one of the two-body problems discussed in class (Earth-Sun, two electrons, or two nucleons) to a three body problem (Earth-Sun-Moon, three electrons, or three nucleons).  Verify through graphs the the programs gives the expected answers.
 
 
-### Tuesday June 22, 10am-1pm EDT/7am-10am PDT (Instructor: Morten)
+### Tuesday June 22, 10am-1pm EDT/7am-10am PDT (Instructor: Julie)
+- Physics: Introduction to basic to quantum mechanics concepts
+- Computational/Mathematics: Linear Algebra Introduction (unitary transformation, eigenvalue algorithms, matrices and vectors)
+- Class Assignment: Small practice problems with quantum and linear algebra concepts, writing a Python program to find eigenvalues
+- Homework assignment:
+
+### Wednesday June 23, 10am-1pm EDT/7am-10am PDT (Instructor: Morten)
 - Physics: Classical two-point boundary value problem
 - Computational: More Python programming and how to solve eigenvalue problems with Numpy
 - Class assignment: develop code for two-point boundary value problem and study analytical and numerical solutions.
 - Homework assignment:
-
-### Wednesday June 23, 10am-1pm EDT/7am-10am PDT (Instructor: Julie)
-- Physics: Intro to quantum mechanics using two-point boundary value problem (previous classical problem)
-- Computational: unitary transformation, eigenvalue algorithms, matrices and vectors
-- Class Assignment: 
-- Homework assignment:
+- 
 ### Thursday June 24, 10am-1pm EDT/7am-10am PDT (Instructor: Morten)
 - Physics: Quantum Mechanical Infinite well as two-point boundary value problem 
 - Computational: Setting up code for quantum mechanical studies
