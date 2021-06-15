@@ -68,6 +68,8 @@ We assume that you have no knowledge of the Python programming language coming i
 ### Tuesday June 22, 10am-1pm EDT/7am-10am PDT (Instructor: Julie)
 
 #### Relevant Topics to Review Before Class
+* Basics statistics such as averages and standard deviations
+* Derivatives and integrals in one or more variables
 
 #### Class Schedule (10am-12pm EDT, 12pm EDT is set aside as an extra office hour)
 * 10:00-10:30: Lecture on quantum basics
