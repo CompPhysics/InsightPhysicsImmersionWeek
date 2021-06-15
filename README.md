@@ -1,49 +1,87 @@
-# Insight Physics Immersion 
-This GitHub repository contains all teaching material relevant for the Physics Immersion week of the Insight program.  The aim is to give you an introduction on how to use programming and numerical mathematics (parts of Computational Science) to solve Physics problems, starting with problems from mechanics and the solution of differential equations to eigenvalue problems and quantum mechanics.  
+# Insight Physics Immersion (June 21-25, 2021)
 
-## Assumed knowledge and planned outcomes:
-Basic calculus and Classical Mechanics such as harmonic oscillations, two-body problems like the Earth-Sun problem and similar. The classical two-body problem will serve as a basis for solving problems of say interacting electrons (two electrons) or protons and neutrons. These examples will be useful when you start with research projects.  Furthermore, we will use this week to introduce basic algorithms for solving two-body problems as well as central features of programming with Python as language. 
+This GitHub repository contains all teaching material relevant for the Physics Immersion week of the Insight program (if you are not familar with GitHub, see [this tutorial](docs/src/JuliesMaterial/Git.md).  The aim of this week is to give you an introduction on how to use Python programming and numerical methods (parts of Computational Science) to solve physics problems, starting with problems from classical mechanics and moving to solving quantum mechanics problems by the end of the week.
 
-## Pre-reading assignments 
+## Assumed Knowledge 
+We assume you have a basic knowledge of calculus and classical mechanics (such as harmonic oscillations, two-body problems like the Earth-Sun problem and similar).  However, a review of these topics will be provided in the pre-course assignments. Any student who does not feel confident in their knowledge of these topics after reviewing the pre-course assignments should contact the lectures (Julie Butler: butle222@msu.edu or Morten Hjorth-Jensen: hjensen@msu.edu).
+
+We do not assume you have had any exposure to linear algebra, quantum mechanics, or Python programming.  Any skills from these fields that are needed for this week will be introduced and explained in terms of more basic physics or mathematics.  Python tutorials will be provided as assignments in the pre-reading, but if you have a good grasp of Python, you can skip these assignments.
+
+## Desired Learning Outcomes for the Week
+* Students should feel confident in their knowledge of the central features of the Python programming language including basic uses of the libraries NumPy and Matplotlib.
+* Studens should be able to solve basic linear algebra problems invovling multiplication, eigenvalues, and eigenvectors.
+* Students should be able to apply their knowledge of Python to create program which model physical systems (both classical and quantum) using numerical methods such as Velocity-Verlet or by finding eigenvalues computationally.
+* Students should demonstrate a basic knowledge of quantum mechanics including the ability to solve simple quantum mechanical problems such as the infinite well and the harmonic oscillator.
+* Students should be able to describe the difference between classical mechanics and quantum mechanics and be able to determine what methodology to use when encountering a new physical system.  Students should also be able to demstrate how the classical two-body problem and the classical harmonic oscillator can be extended to quantum mechanical problems.
+
+
+## Pre-course assignments 
+
+These assignments should be completed before the first class meets on June 21st.  These assignments will not be turned into the lecturers for a grade but the material presented for the week will assume you have completed and understood these assignements.  If you have any trouble completing these assignments, please contact the lecturers (Julie Butler: butle222@msu.edu or Morten Hjorth-Jensen: hjensen@msu.edu).
+
 ### Physics skills: 
 Review of classical mechanics concepts like 
-- equations of motion, 
-- forces and potentials, 
-- two-body problems, harmomic oscillations and 
-- conserved quantities.
+- Newton's laws and the basic equations of motion
+- Forces, potentials, and how they are related
+- Two-body problems, especially the Earth-Sun system
+- Harmomic Oscillator
+
+Suggested readings and pre-recorded lectures will be added soon.  We will be working out of the Taylor's classical mechanics textbook (a PDF copy will be provided) but you can use any classical mechanics textbook you feel comfortable with that covers the same material.
+
 ### Computational Science skills:
-- Introduction ot Python, if-else, loops, if-while, arrays etc
-- Numerical algorithms for solving ordinary differential equations like Euler's method, Euler-Cromer and Velocity Verlet
-- Extremely useful Python-libraries like Numpy, MatplotLib, Pandas and other.
-### Homework assignment:
-- Write a program that finds the height as function of time for a falling object with and without viscous drag.
-- Write a program that models a ball being kicked
+We assume that you have no knowledge of the Python programming language coming into this week and have prepared a series of four tutorials covering basic concepts.  If you have already had a course on Python, feel free to skip over any material you know.  If you are new to learning Python there are some additional resources at the end of Notebook 1 that may also be helpful.  These are longer than the notebooks assigned below but give you a more through introduction to the Python programming language. 
+
+* [Document 1: Python Programming and Notebooks](docs/src/JuliesMaterial/PreCoursePythonNotebooks.md)
+* [Notebook 1: Introduction to Scientific Python](docs/src/JuliesMaterial/PreCourseNotebook1.ipynb)
+* [Notebook 2: NumPy for Scientific Python](docs/src/JuliesMaterial/PreCourseNotebook2.ipynb)
+* [Notebook 3: Matplotlib for Scientific Python](docs/src/JuliesMaterial/PreCourseNotebook3.ipynb)
+* [Notebook 4: Doing Physics With Python ](docs/src/JuliesMaterial/PreCourseNotebook4.ipynb)(includes a basic review of classical mechanics)
+
+### Preparing for Class on Monday (June 21)
+* Review [these lecture notes](docs/src/JuliesMaterial/Day1.ipynb) and make sure you understand all of the pre-course Python notebooks, but especially Notebook 4.
+
 
 ## Schedule
-### Monday June 21, 10am-1pm EDT/7am-10am PDT
-- Physics: Classical two-body problem
-- Computational: Python review and discussion of Euler-Cromer and Velocity Verlet methos
-- Class assignment: write Python code that simulates the Earth-Sun system. This can be changed to represent electrons or nucleons. Play around with different potentials.
-- Homework assignment:
+### Monday June 21, 10am-1pm EDT/7am-10am PDT (Instructor: Julie)
 
-### Tuesday June 22, 10am-1pm EDT/7am-10am PDT
+#### Relevant Topics to Review Before Class
+* Classical Two-Body Problem
+* Basic Python programming including the NumPy and Matplotlib libraries
+* The Velocity-Verlet Method
+
+#### Class Schedule (10am-12pm EDT, 12pm EDT is set aside as an extra office hour)
+* 10:00-10:15: Q&A on the pre-course assignments (additional questions can be asked during the office hour immediately after class)
+* 10:15-11:00: Lecture on the classical two-body problem and how to translate a two-body problem to Python code
+* 11:00-12:00: Group Learning Activity - In groups of approximately 4 create a Python code that models the Earth-Sun two-body system.  Once correct, try to extend the problem to model two electrons, and finally two nucleons.  A more detailed problem statement can be found [here](docs/src/JuliesMaterial/Day1Activity.md).  Questions can be asked about the project during class and after class during the office hour.
+
+#### Learning Goals for Day
+* Students should understand the concepts behind the classical two-body problem and be able to write down the equations that are used to solve it.
+* Students should demonstrate how the velocity-verlet method can be used to computationally model the motion of an object given a force.
+* Students should create a Python program that models the earth-sun system and compare it to the expected, analytical answer.
+* Students should be able to extend their two-body Python program to model two electrons and two nucleons.
+
+#### Homework Assignment for Tuesday
+* Extend one of the two-body problems discussed in class (Earth-Sun, two electrons, or two nucleons) to a three body problem (Earth-Sun-Moon, three electrons, or three nucleons).  Verify through graphs the the programs gives the expected answers.
+
+
+### Tuesday June 22, 10am-1pm EDT/7am-10am PDT (Instructor: Morten)
 - Physics: Classical two-point boundary value problem
 - Computational: More Python programming and how to solve eigenvalue problems with Numpy
 - Class assignment: develop code for two-point boundary value problem and study analytical and numerical solutions.
 - Homework assignment:
 
-### Wednesday June 23, 10am-1pm EDT/7am-10am PDT
+### Wednesday June 23, 10am-1pm EDT/7am-10am PDT (Instructor: Julie)
 - Physics: Intro to quantum mechanics using two-point boundary value problem (previous classical problem)
 - Computational: unitary transformation, eigenvalue algorithms, matrices and vectors
 - Class Assignment: 
 - Homework assignment:
-### Thursday June 24, 10am-1pm EDT/7am-10am PDT
+### Thursday June 24, 10am-1pm EDT/7am-10am PDT (Instructor: Morten)
 - Physics: Quantum Mechanical Infinite well as two-point boundary value problem 
 - Computational: Setting up code for quantum mechanical studies
 - Class assignment:
 - Homework Assignment:
 
-### Friday June 25, 10am-1pm EDT/7am-10am PDT
+### Friday June 25, 10am-1pm EDT/7am-10am PDT (Instructor: TBD)
 - Physics: Harmonic oscillator and interacting two-particle problems
 - Computational: Write a more general code that can handle different physical systems (one and two-particle systems)
 - Class assignment:
