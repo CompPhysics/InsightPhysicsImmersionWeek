@@ -18,7 +18,7 @@ We do not assume you have had any exposure to linear algebra, quantum mechanics,
 
 
 ## Teaching Staff
-We have a collection of three lecturers and four teaching assistants avaliable to helo you this week.  Learn more about our teaching staff [here](people.md).
+We have a collection of three lecturers and four teaching assistants avaliable to help you this week.  Learn more about our teaching staff [here](people.md).
 
 ## Communications
 
