@@ -14,34 +14,17 @@ We do not assume you have had any exposure to linear algebra, quantum mechanics,
 * Students should demonstrate a basic knowledge of quantum mechanics including the ability to solve simple quantum mechanical problems such as the infinite well and the harmonic oscillator.
 * Students should be able to describe the difference between classical mechanics and quantum mechanics and be able to determine what methodology to use when encountering a new physical system.  Students should also be able to demonstrate how the classical two-body problem and the classical harmonic oscillator can be extended to quantum mechanical problems.
 
+## Expectations
+
 
 ## Teaching Staff
 We have a collection of three lecturers and four teaching assistants avaliable to helo you this week.  Learn more about our teaching staff [here](people.md).
 
+## Communications
+
 ## Pre-course assignments
 
-These assignments should be completed before the first class meets on June 21st.  These assignments will not be turned into the lecturers for a grade but the material presented for the week will assume you have completed and understood these assignments.  If you have any trouble completing these assignments, please contact the lecturers (Julie Butler: butle222@msu.edu or Morten Hjorth-Jensen: hjensen@msu.edu).
-
-### Physics skills:
-Review of classical mechanics concepts like
-- Newton's laws and the basic equations of motion
-- Forces, potentials, and how they are related
-- Two-body problems, especially the Earth-Sun system
-- Harmonic Oscillator
-
-Suggested readings and pre-recorded lectures will be added soon.  We will be working out of the Taylor's classical mechanics textbook (a PDF copy will be provided) but you can use any classical mechanics textbook you feel comfortable with that covers the same material.
-
-### Computational Science skills:
-We assume that you have no knowledge of the Python programming language coming into this week and have prepared a series of four tutorials covering basic concepts.  If you have already had a course on Python, feel free to skip over any material you know.  If you are new to learning Python there are some additional resources at the end of Notebook 1 that may also be helpful.  These are longer than the notebooks assigned below but give you a more through introduction to the Python programming language.
-
-* [Document 1: Python Programming and Notebooks](docs/src/JuliesMaterial/PreCoursePythonNotebooks.md) (TO-DO: Add document)
-* [Notebook 1: Introduction to Scientific Python](docs/src/JuliesMaterial/IntroductionToScientificPython.ipynb)
-* [Notebook 2: NumPy for Scientific Python](docs/src/JuliesMaterial/PreCourseNotebook2.ipynb) (TO-DO: Add document)
-* [Notebook 3: Matplotlib for Scientific Python](docs/src/JuliesMaterial/MatplotlibForScientificPython.ipynb)
-* [Notebook 4: Doing Physics With Python ](docs/src/JuliesMaterial/PreCourseNotebook4.ipynb)(includes a basic review of classical mechanics) (TO-DO: Add document)
-
-### Preparing for Class on Monday (June 21)
-* Review [these lecture notes](docs/src/JuliesMaterial/Day1.ipynb) (TO-DO: Add document) and make sure you understand all of the pre-course Python notebooks, but especially Notebook 4.
+In order to prepare you for the Physics Immersion Week we have prepared a series of exercises on classical mechanics and Python programming.  They can be found [hete](precourse.md).  We will be using the knowledge gained from completing these exercises during class.  If you have any trouble with the exercises, please reach out to us by Slack or email.
 
 
 ## Schedule
