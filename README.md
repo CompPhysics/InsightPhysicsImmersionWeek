@@ -16,18 +16,7 @@ We do not assume you have had any exposure to linear algebra, quantum mechanics,
 
 
 ## Teaching Staff
-### Lecturers
-* Morten Hjorth-Jensen
-* Julie Butler
-* Linda Hlophe
-
-
-### Teaching Assistants (In-Class and Slack)
-* * Christian Drischler
-* Jane Kim
-* Kang Yu
-* Yani Udiani
-
+We have a collection of three lecturers and four teaching assistants avaliable to helo you this week.  Learn more about our teaching staff [here](people.md).
 
 ## Pre-course assignments
 
