@@ -24,7 +24,7 @@ We have a collection of three lecturers and four teaching assistants avaliable t
 
 ## Pre-course assignments
 
-In order to prepare you for the Physics Immersion Week we have prepared a series of exercises on classical mechanics and Python programming.  They can be found [hete](precourse.md).  We will be using the knowledge gained from completing these exercises during class.  If you have any trouble with the exercises, please reach out to us by Slack or email.
+In order to prepare you for the Physics Immersion Week we have prepared a series of exercises on classical mechanics and Python programming.  They can be found [here](precourse.md).  We will be using the knowledge gained from completing these exercises during class.  If you have any trouble with the exercises, please reach out to us by Slack or email.
 
 
 ## Schedule
