@@ -5,7 +5,7 @@ This GitHub repository contains all teaching material relevant for the Physics I
 ## Assumed Knowledge
 We assume you have a basic knowledge of calculus and classical mechanics (such as harmonic oscillations, two-body problems like the Earth-Sun problem and similar).  However, a review of these topics will be provided in the pre-course assignments. Any student who does not feel confident in their knowledge of these topics after reviewing the pre-course assignments should contact the lectures (Julie Butler: butle222@msu.edu or Morten Hjorth-Jensen: hjensen@msu.edu).
 
-We do not assume you have had any exposure to linear algebra, quantum mechanics, or Python programming.  Any skills from these fields that are needed for this week will be introduced and explained in terms of more basic physics or mathematics.  Python tutorials will be provided as assignments in the pre-reading, but if you have a good grasp of Python, you can skip these assignments.
+We do not assume you have had any exposure to linear algebra, quantum mechanics, or Python programming.  Any skills from these fields that are needed for this week will be introduced and explained in terms of more basic physics or mathematics.  Python tutorials will be provided as assignments in the pre-course, but if you have a good grasp of Python, you can skip these assignments.
 
 ## Desired Learning Outcomes for the Week
 * Students should feel confident in their knowledge of the central features of the Python programming language including basic uses of the libraries `NumPy` and `Matplotlib`.
