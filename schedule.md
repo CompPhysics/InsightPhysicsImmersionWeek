@@ -1,3 +1,5 @@
+# Schedule for INSIGHT Physics Immersion Week (June 21 - June 25)
+
 ## Monday June 21, 10am-1pm EDT/7am-10am PDT (Instructor: Julie)
 
 #### Relevant Topics to Review Before Class
