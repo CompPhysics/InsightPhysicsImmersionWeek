@@ -2,6 +2,9 @@
 
 ## Lecturers
 ### Morten Hjorth-Jensen
+![Morten](docs/src/MortensMaterial/TeachingPics/Morten.jpg)
+
+Hi folks! My name is Morten and I 
 ### Julie Butler
 
 ![Julie](docs/src/JuliesMaterial/TeachingPics/Julie.jpg)
