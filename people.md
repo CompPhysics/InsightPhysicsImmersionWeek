@@ -13,13 +13,13 @@ Hi!  My name is Julie and I am a fourth year graduate student at Michigan State 
 
 
 ## Teaching Assistants (In-Class and Slack)
+
 ### Christian Drischler
 
 ![Christian](docs/src/JuliesMaterial/TeachingPics/Christian.jpg)
 
 Hi, my name is Christian! I joined Michigan State University in October 2020 as FRIB Theory Fellow. Prior to that I was a postdoctoral Humboldt Fellow at University of California,
-Berkeley. In 2017 I graduated from Technical University Darmstadt, Germany, with a doctoral degree in physics. My research interests include the study of strongly interacting matter under the extreme conditions present in neutron stars. Neutron stars are the densest objects in the observable Universe, only second to black holes. Some of the tools used in this research are: effective field theory, Bayesian methods, automated code generation, and high-performance computing.
-
+Berkeley. In 2017 I graduated from Technical University Darmstadt, Germany, with a doctoral degree in physics. My research interests include the study of strongly interacting matter under the extreme conditions present in neutron stars. Neutron stars are among the densest objects in the observable Universe, only second to black holes. Some of the tools used in this research are: effective field theory, Bayesian methods, automated code generation, and high-performance computing.
 
 ### Jane Kim
 
