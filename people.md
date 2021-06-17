@@ -1,16 +1,18 @@
 # Teaching Staff
 
 ## Lecturers
-### Morten Hjorth-Jensen
-![Morten](docs/src/MortensMaterial/TeachingPics/Morten.jpg)
 
-Hi folks! My name is Morten and I am a theoretical physicist with a strong interest in computational physics and many-body theory in general, and the nuclear many-body problem and nuclear structure problems in particular. This means that I study various methods for solving for example Schrödinger's equation for many interacting particles, spanning from algorithmic aspects to the mathematical properties of such methods. The latter also leads to a strong interest in computational physics as well as computational aspects of quantum mechanical methods ranging from traditional many-body methods to quantum computing and machine learning. I share my time equally between Michigan State University in the US and the University of Oslo, Norway. Feel free to contact me at hjensen@msu.edu.
 ### Julie Butler
 
 ![Julie](docs/src/JuliesMaterial/TeachingPics/Julie.jpg)
 
 Hi!  My name is Julie and I am a fourth year graduate student at Michigan State University.  Though I now live in East Lansing, Michigan, I am originally from rural South Carolina.  I am a first generation college student and I attended a high school with limited funding and a small college which only offered a small number of physics classes.  These limitations did not stop be from pursuing my dream of becoming a physicist, even though I had to work harder than students who came from backgrounds with more opportunities.  My research in graduate school involves finding ways to use machine learning to speed up nuclear theory calculations, which can take days or weeks to run using only traditional methods.  After graduate school I hope to get a job teaching physics at a small college or university. Please feel free to contact me at butle222@msu.edu.
 
+
+### Morten Hjorth-Jensen
+![Morten](docs/src/MortensMaterial/TeachingPics/Morten.jpg)
+
+Hi folks! My name is Morten and I am a theoretical physicist with a strong interest in computational physics and many-body theory in general, and the nuclear many-body problem and nuclear structure problems in particular. This means that I study various methods for solving for example Schrödinger's equation for many interacting particles, spanning from algorithmic aspects to the mathematical properties of such methods. The latter also leads to a strong interest in computational physics as well as computational aspects of quantum mechanical methods ranging from traditional many-body methods to quantum computing and machine learning. I share my time equally between Michigan State University in the US and the University of Oslo, Norway. Feel free to contact me at hjensen@msu.edu.
 
 ### Linda Hlophe
 
