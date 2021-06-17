@@ -21,6 +21,7 @@ We do not assume you have had any exposure to linear algebra, quantum mechanics,
 We have a collection of three lecturers and four teaching assistants avaliable to help you this week.  Learn more about our teaching staff [here](people.md).
 
 ## Communications
+If you have any questions you can email Julie at butle222@msu.edu or Morten at hjensen@msu.edu.  You can also contact all of the teaching staff and your classmates using the Slack channel.  Slack is an instant messaging software used by many academic and professional teams.  You can join our Slack at [this link](https://join.slack.com/t/physicsimmersion/shared_invite/zt-rmsos82o-AJRyV6mcvhP2rT5_PcYpzg).  We will use a combination of Slack and email to communicate course annoucements and materials.
 
 ## Pre-course assignments
 
