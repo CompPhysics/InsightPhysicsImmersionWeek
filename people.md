@@ -35,6 +35,9 @@ Berkeley. In 2017 I graduated from Technical University Darmstadt, Germany, with
 Hi, my name is Jane! I was born and raised in Anchorage, Alaska, but I’ve been at Michigan State University for the past seven years as an undergraduate and a graduate student. Halfway through my undergraduate studies in physics and math, I was introduced to programming. Suddenly, I could solve problems that I couldn’t even dream about solving by hand! This made me want to develop this skill even further, so I am now working on a dual PhD in physics and computational math, science, and engineering (CMSE). My research involves using machine learning to solve quantum many-body problems, with a focus on neural networks and variational Monte Carlo.
 
 ### Kang Yu
+
+Hi, my name is Kang! I am a graduate student at Michigan State University coming from China. During my undergraduate studies, I worked on condensed matter physics. Then I turned to nuclear physics after entering MSU. I am generally interested in many body theory, both in nuclear physics and condensed matter. Along the way of physics, I find programming plays a significant role in modern research, so I am spending a lot of time to improve my skills. Outside of research, I love reading books and traveling around.
+
 ### Yani Udiani
 
 ![Yani](docs/src/JuliesMaterial/TeachingPics/Yani.jpeg)
