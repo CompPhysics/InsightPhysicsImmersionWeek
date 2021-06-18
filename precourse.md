@@ -17,7 +17,7 @@ We assume that you have no knowledge of the Python programming language coming i
 * [Notebook 1: Introduction to Scientific Python](docs/src/JuliesMaterial/IntroductionToScientificPython.ipynb)
 * [Notebook 2: NumPy for Scientific Python](docs/src/JuliesMaterial/NumpyForScientificPythonipynb.ipynb) 
 * [Notebook 3: Matplotlib for Scientific Python](docs/src/JuliesMaterial/MatplotlibForScientificPython.ipynb)
-* [Notebook 4: Doing Physics With Python ](docs/src/JuliesMaterial/PreCourseNotebook4.ipynb)(includes a basic review of classical mechanics) (TO-DO: Add document)
+* [Notebook 4: Doing Physics With Python ](docs/src/JuliesMaterial/PhysicsWithPython.ipynb)(includes a basic review of classical mechanics) 
 
 ### Preparing for Class on Monday (June 21)
-* Review [these lecture notes](docs/src/JuliesMaterial/Day1.ipynb) (TO-DO: Add document) and make sure you understand all of the pre-course Python notebooks, but especially Notebook 4.
+* Review [these lecture notes](docs/src/JuliesMaterial/Day1.ipynb) (Will be added by Saturday afternoon!) and make sure you understand all of the pre-course Python notebooks, but especially Notebook 4.
