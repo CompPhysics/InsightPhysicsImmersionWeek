@@ -34,3 +34,7 @@ Hi, my name is Jane! I was born and raised in Anchorage, Alaska, but I’ve been
 
 ### Kang Yu
 ### Yani Udiani
+
+![Yani](docs/src/JuliesMaterial/TeachingPics/Yani.jpeg)
+
+I am a soon to be fifth year PhD student (😥) working on the development and improvement of ab-initio calculations for neutron star equations of state. My hobbies include writing music, playing chess, and wondering what I'm doing with my life :)  I look forward to meeting you guys.
