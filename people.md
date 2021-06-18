@@ -16,6 +16,9 @@ Hi folks! My name is Morten and I am a theoretical physicist with a strong inter
 
 ### Linda Hlophe
 
+![Linda](docs/src/JuliesMaterial/TeachingPics/lindahlophe_insight.jpg)
+
+Hello there! My name is Linda Hlophe and I am postdoctoral researcher at the Lawrence Livermore National Laboratory (LLNL). I was born and raised in rural Eswatini (formerly Swaziland) in southern Africa where I attended a local high school. Our school was severely under-resourced and we couldn’t even afford physics textbooks. I was fortunate to be the only student from my class to be admitted to the university of Eswatini (the only university at the time), majoring in Physics and Chemistry. After graduating in 2010 I started my graduate studies at Ohio University which I completed in 2016. Thereafter I got a postdoctoral appointment at Michigan State University (MSU) which ended in 2020 and thereafter I joined LLNL. I specialize on the theoretical description of nuclear reactions using few-body methods in conjunction with a first-principles approach to nuclear structure. I primarily simulate reactions between exotic atomic nuclei (particularly those create in supernova explosions or neutron-star mergers) by solving, e.g.,  the Schrodinger equation for three interacting particles that are not bound together. This is generally an intensive computationally task requiring advanced methods for numerically solving differential and integral equations. Feel free to contact me at hlophe1@llnl.gov. 
 
 ## Teaching Assistants (In-Class and Slack)
 
