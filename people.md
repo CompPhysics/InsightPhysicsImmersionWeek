@@ -36,6 +36,8 @@ Hi, my name is Jane! I was born and raised in Anchorage, Alaska, but I’ve been
 
 ### Kang Yu
 
+![Kang](docs/src/JuliesMaterial/TeachingPics/image.png)
+
 Hi, my name is Kang! I am a graduate student at Michigan State University coming from China. During my undergraduate studies, I worked on condensed matter physics. Then I turned to nuclear physics after entering MSU. I am generally interested in many body theory, both in nuclear physics and condensed matter. Along the way of physics, I find programming plays a significant role in modern research, so I am spending a lot of time to improve my skills. Outside of research, I love reading books and traveling around.
 
 ### Yani Udiani
