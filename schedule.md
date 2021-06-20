@@ -9,8 +9,8 @@
 
 #### Class Schedule (10am-12pm EDT, 12pm EDT is set aside as an extra office hour)
 * 10:00-10:30: Introduction to the course and Q&A on the pre-course assignments (additional questions can be asked during the office hour immediately after class)
-* 10:30-11:00: Lecture on the classical two-body problem and how to translate a two-body problem to Python code
-* 11:00-12:00: Group Learning Activity - In groups of approximately 4 create a Python code that models the Earth-Sun two-body system.  Once correct, try to extend the problem to model two electrons, and finally two nucleons.  A more detailed problem statement can be found [here](docs/src/JuliesMaterial/Day1Activity.md).  (TO-DO: Add document) Questions can be asked about the project during class and after class during the office hour.
+* 10:30-11:00: Lecture on the classical two-body problem and how to translate a two-body problem to Python code.  View the lecture notes [here](docs/src/JuliesMaterial/Day1Lec2.ipynb).
+* 11:00-12:00: Group Learning Activity - In groups of approximately 4 create a Python code that models the Earth-Sun two-body system.  Once correct, try to extend the problem to model two electrons, and finally two atoms.  A more detailed problem statement can be found [here](docs/src/JuliesMaterial/Day1Activity1.ipynb).  Questions can be asked about the project during class and after class during the office hour.
 
 #### Learning Goals for Day
 * Students should understand the concepts behind the classical two-body problem and be able to write down the equations that are used to solve it.
@@ -19,7 +19,9 @@
 * Students should be able to extend their two-body Python program to model two electrons and two nucleons.
 
 #### Homework Assignment for Tuesday
-* Extend one of the two-body problems discussed in class (Earth-Sun, two electrons, or two nucleons) to a three body problem (Earth-Sun-Moon, three electrons, or three nucleons).  Verify through graphs the the programs gives the expected answers.
+* Complete the coding assignment from day including the two bonus activites.
+* Challenge Problem: Extend one of the two-body problems discussed in class (Earth-Sun, two electrons, or two nucleons) to a three body problem (Earth-Sun-Moon, three electrons, or three nucleons).  Verify through graphs the the programs gives the expected answers.
+* Read the [this introduction to quantum mechanics](docs/src/JuliesMaterial/quantum.pdf) and [this introduction to linear algebra](docs/src/JuliesMaterial/la.pdf)
 * Review the lecture notes for Tuesday located [here](docs/src/JuliesMaterial/Day2.ipynb). (TO-DO: Add document)
 
 
