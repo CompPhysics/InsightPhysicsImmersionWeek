@@ -21,7 +21,7 @@
 #### Homework Assignment for Tuesday
 * Complete the coding assignment from day including the two bonus activites.
 * Challenge Problem: Extend one of the two-body problems discussed in class (Earth-Sun, two electrons, or two nucleons) to a three body problem (Earth-Sun-Moon, three electrons, or three nucleons).  Verify through graphs the the programs gives the expected answers.
-* Read the [this introduction to quantum mechanics](docs/src/JuliesMaterial/quantum.pdf) and [this introduction to linear algebra](docs/src/JuliesMaterial/la.pdf)
+* Read the [this introduction to quantum mechanics](docs/src/JuliesMaterial/quantum.pdf) from "No Nonsense Quantum Mechanics" and [this introduction to linear algebra](docs/src/JuliesMaterial/la.pdf) from Carnegie Mellon University
 * Review the lecture notes for Tuesday located [here](docs/src/JuliesMaterial/Day2.ipynb). (TO-DO: Add document)
 
 
