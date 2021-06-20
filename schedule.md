@@ -9,8 +9,8 @@
 
 #### Class Schedule (10am-12pm EDT, 12pm EDT is set aside as an extra office hour)
 * 10:00-10:30: Introduction to the course and Q&A on the pre-course assignments (additional questions can be asked during the office hour immediately after class)
-* 10:30-11:00: Lecture on the classical two-body problem and how to translate a two-body problem to Python code
-* 11:00-12:00: Group Learning Activity - In groups of approximately 4 create a Python code that models the Earth-Sun two-body system.  Once correct, try to extend the problem to model two electrons, and finally two nucleons.  A more detailed problem statement can be found [here](docs/src/JuliesMaterial/Day1Activity.md).  (TO-DO: Add document) Questions can be asked about the project during class and after class during the office hour.
+* 10:30-11:00: Lecture on the classical two-body problem and how to translate a two-body problem to Python code.  View the lecture notes [here](docs/src/JuliesMaterial/Day1Lec2.ipynb).
+* 11:00-12:00: Group Learning Activity - In groups of approximately 4 create a Python code that models the Earth-Sun two-body system.  Once correct, try to extend the problem to model two electrons, and finally two nucleons.  A more detailed problem statement can be found [here](docs/src/JuliesMaterial/Day1Activity1.md).  (TO-DO: Add document) Questions can be asked about the project during class and after class during the office hour.
 
 #### Learning Goals for Day
 * Students should understand the concepts behind the classical two-body problem and be able to write down the equations that are used to solve it.
