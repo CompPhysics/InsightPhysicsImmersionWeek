@@ -9,7 +9,7 @@
 
 #### Class Schedule (10am-12pm EDT, 12pm EDT is set aside as an extra office hour)
 * 10:00-10:30: Introduction to the course and Q&A on the pre-course assignments (additional questions can be asked during the office hour immediately after class)
-* 10:30-11:00: Lecture on the classical two-body problem and how to translate a two-body problem to Python code.  View the lecture notes [here](docs/src/JuliesMaterial/Day1Lec2.ipynb).
+* 10:30-11:00: Lecture on the classical two-body problem and how to translate a two-body problem to Python code.   View the lecture notes [here](docs/src/JuliesMaterial/Day1Lec2.ipynb).
 * 11:00-12:00: Group Learning Activity - In groups of approximately 4 create a Python code that models the Earth-Sun two-body system.  Once correct, try to extend the problem to model two electrons, and finally two atoms.  A more detailed problem statement can be found [here](docs/src/JuliesMaterial/Day1Activity1.ipynb).  Questions can be asked about the project during class and after class during the office hour.
 
 #### Learning Goals for Day
@@ -44,19 +44,49 @@
 #### Homework Assignment for Wednesday
 * Complete [this activity](docs/src/JuliesMaterials/Day2HW1.md) (TO-DO: Add document) to review the quantum mechanics and linear algebra concepts learned today.
 * Complete [this notebook](doscs/src/JulieMaterials/Day2HW1.ipynb) (TO-DO: Add document) which walks you through how to find eigenvalues and eigenvectors in Python.  Keep this code handy because we will be using it on Wednesday and Thursday.
-* Review the lecture notes for Wednesday located [here](link). (TO-DO: Add document (MORTEN))
+* Review the lecture notes for Wednesday located [here](docs/src/MortensMaterial/Day3Lec.ipynb).
 
 ## Wednesday June 23, 10am-1pm EDT/7am-10am PDT (Instructor: Morten)
-- Physics: Classical two-point boundary value problem
-- Computational: More Python programming and how to solve eigenvalue problems with `Numpy`
-- Class assignment: develop code for two-point boundary value problem and study analytical and numerical solutions.
-- Homework assignment:
--
+* 10:00-10:50: Lecture on eigenvalue problems and classical two-point boundary value problem. Example system: spring or beam fastened in both ends and quantization. View the lecture notes [here](docs/src/MortensMaterial/Day3Lec.ipynb).
+* 10:50-11:00: Break with time for questions
+* 11:00-11:50: More on two-point boundary value problems and how to solve eigenvalue problems with Numpy. Develop code for two-point boundary value problem and study analytical and numerical solutions. See the lectures for example code [here](docs/src/MortensMaterial/Day3Lec.ipynb).
+* 11:50-12:00: Q&A session and homework help (Wednesday's homework).  Can be extended into the 12pm-1pm office hour time slot.
+* A series of short questions will be asked and discussed during the lectures to help you check your understanding of the material.  
+
+#### Learning Goals for Day
+* Students should understand how to discretize a differential equation and scale the equations.
+* Students should understand how a two-point boundary value problem from a second-order differential equation can be changed into an eigenvalue problem.
+* Students should create a Python program that solves a two-point boundary value for a spring/beam fastened at both ends.
+* Students should be able to compare the numerical eigenpairs (eigenvalues and eigenvectors) with the given analytical ones.
+
+
+#### Homework Assignment for Thursday
+* Complete [this activity](docs/src/MortensMaterials/Day3HW1.md) 
+* Complete [this notebook](docs/src/MortensMaterials/Day3HW1.ipynb) 
+* Review the lecture notes for Thursday located [here](docs/src/MortensMaterial/Day4Lec.ipynb).
+
+
+
+
 ## Thursday June 24, 10am-1pm EDT/7am-10am PDT (Instructor: Morten)
-- Physics: Quantum Mechanical Infinite well as two-point boundary value problem
-- Computational: Setting up code for quantum mechanical studies
-- Class assignment:
-- Homework Assignment:
+* 10:00-10:50: Lecture on eigenvalue problems and quantum mechanical two-point boundary value problem. Example system: particle in a box potential or similar one-particle problems. View the lecture notes [here](docs/src/MortensMaterial/Day4Lec1ipynb).
+* 10:50-11:00: Break with time for questions
+* 11:00-11:50: How to solve quantum mechanical eigenvalue problem for particle confined to move in a potential. Develop code for two-point boundary value problem and study analytical and numerical solutions. See the lectures for example code [here](docs/src/MortensMaterial/Day4Lec.ipynb). We will reuse the code from Wednesday. The only addition which is needed is the given potential. 
+* 11:50-12:00: Q&A session and homework help (Thursday's homework).  Can be extended into the 12pm-1pm office hour time slot.
+* A series of short questions will be asked and discussed during the lectures to help you check your understanding of the material.  
+
+#### Learning Goals for Day
+* Students should understand how a one-particle problem can be rewritten as a two-point boundary value problem.
+* Students should understand the difference between bound and unbound states.
+* Students should create a Python program that solves the time-independent single-particle Schroedinger equation.
+* Students should be able to extend their code to other types of confining potentials/interactions.
+
+
+#### Homework Assignment for Thursday
+* Complete [this activity](docs/src/MortensMaterials/Day4HW1.md) 
+* Complete [this notebook](docs/src/MortensMaterials/Day4HW1.ipynb) 
+* Review the lecture notes for Friday located [here](docs/src/MortensMaterial/Day5Lec1.ipynb).
+
 
 ## Friday June 25, 10am-1pm EDT/7am-10am PDT (Instructor: Linda, Julie, Morten)
 
