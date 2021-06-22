@@ -478,6 +478,9 @@ Convince yourself that the differential equation, when discretized, can be rewri
 Use the included python code here or write your own and compare the analytical eigenvalues with the numerical ones for $n=4$, $n=10$ and $n=100$. Comment your results.
 !esubex
 
+!bsubex
+Plot the eigenvalues for the three lowest eigenvalues and comment your results.
+!esubex
 
 
 
