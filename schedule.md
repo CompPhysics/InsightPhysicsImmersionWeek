@@ -40,9 +40,13 @@
 * A series of short questions will be asked and discussed during the lectures to help you check your understanding of the material.  
 
 #### Learning Goals for Day
+* Students should be able to solve linear algebra problems involving multiplication, eigenvalues, and eigenvectors by hand.
+* Students should be able to explain why quantization and the uncertainity principle arrive from the wave-like nature of particles.
+* Students should be able to demonstrate the following properties of wavefunctions: superposition principle, normalization, and finding probabilities.
+* Students should be able to symbolically calcualte expectation values.
 
 #### Homework Assignment for Wednesday
-* Complete [this activity](docs/src/JuliesMaterials/Day2HW.md) (TO-DO: Add document) to review the quantum mechanics and linear algebra concepts learned today.
+* Complete [this activity](docs/src/JuliesMaterials/Day2HW.ipynb) (TO-DO: Add document) to review the quantum mechanics and linear algebra concepts learned today.
 * Review the lecture notes for Wednesday located [here](docs/src/MortensMaterial/Day3Lec.ipynb).
 
 ## Wednesday June 23, 10am-1pm EDT/7am-10am PDT (Instructor: Morten)
