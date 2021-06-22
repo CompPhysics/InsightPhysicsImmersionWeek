@@ -320,32 +320,32 @@ meaning that we have $\rho \in [0,1]$.    By reordering the equation as
 \]
 !et
 with $\lambda= FL^2/\gamma$ we have an equation that when discretized, becomes an eigenvalue problem.
-We use the same 
-expression for the second derivative of a function $u$ as we did in project 1, namely
+We use one of the more famous 
+expression for the second derivative of a function $u$ (called a "three-point":"https://github.com/CompPhysics/ComputationalPhysics/blob/master/doc/Lectures/lectures2015.pdf" formula to be derived  on whiteboard)
 !bt
 \begin{equation}
     u''=\frac{u(\rho+h) -2u(\rho) +u(\rho-h)}{h^2} +O(h^2),
     label{eq:diffoperation}
 \end{equation}
 !et 
-where $h$ is our step.
+where $h$ is a so-called  step size.
 
 !split
-===== Min and Max values for the varibale $\rho$ =====
+===== Min and Max values for the variabale $\rho$ =====
 
 Next we define minimum and maximum values for the variable $\rho$,
 $\rho_{\mathrm{min}}=0$  and $\rho_{\mathrm{max}}=1$, respectively.
-With a given number of mesh points, $N$, we 
-define the step length $h$ as, with $\rho_{\mathrm{min}}=\rho_0$  and $\rho_{\mathrm{max}}=\rho_N$,
+With a given number of mesh points, $n$, we 
+define the step length $h$ as, with $\rho_{\mathrm{min}}=\rho_0$  and $\rho_{\mathrm{max}}=\rho_n$,
 !bt
 \begin{equation*}
-  h=\frac{\rho_N-\rho_0 }{N}.
+  h=\frac{\rho_N-\rho_0 }{n}.
 \end{equation*}
 !et
 The value of $\rho$ at a point $i$ is then 
 !bt
 \[
-    \rho_i= \rho_0 + ih \hspace{1cm} i=1,2,\dots , N.
+    \rho_i= \rho_0 + ih \hspace{1cm} i=1,2,\dots , n.
 \]
 !et
 We can rewrite the differential equation for a value $\rho_i$ as
@@ -374,23 +374,23 @@ as an eigenvalue problem, that is
                                 \dots  & \dots & \dots & \dots  &\dots      &\dots & \dots\\
                                 0   & \dots & \dots & \dots  &a  &d & a\\
                                 0   & \dots & \dots & \dots  &\dots       &a & d\end{bmatrix} 
-                                 \begin{bmatrix} u_1 \\ u_2 \\ u_3 \\ \dots \\ u_{N-2} \\ u_{N-1}\end{bmatrix} = \lambda \begin{bmatrix} u_1 \\ u_2 \\ u_3 \\ \dots \\ u_{N-2} \\ u_{N-1}\end{bmatrix} . 
+                                 \begin{bmatrix} u_1 \\ u_2 \\ u_3 \\ \dots \\ u_{n-2} \\ u_{n-1}\end{bmatrix} = \lambda \begin{bmatrix} u_1 \\ u_2 \\ u_3 \\ \dots \\ u_{n-2} \\ u_{n-1}\end{bmatrix} . 
 label{eq:matrixse} 
 \end{equation}
 !et 
 
-We have not included the endpoints $u_0$ and $u_N$. 
+We have not included the endpoints $u_0$ and $u_n$. 
 We have defined $d=2/h^2$ and the non-diagonal ones as $a=-1/h^2$. This eigenvalue problem has analytical eigenpairs, with eigenvalues given as (note that we define the matrix to run from $i=1$ to $i=N-1$)
 !bt
 \[
-\lambda_j = d+2a\cos{(\frac{j\pi}{N})}, \hspace{0.2cm} j=1,2,\dots N-1.
+\lambda_j = d+2a\cos{(\frac{j\pi}{n})}, \hspace{0.2cm} j=1,2,\dots n-1.
 \]
 !et
 
 The eigenvectors are 
 !bt
 \[
-\mathbf{u}_j = [ \sin(\frac{j\pi}{N}), \sin(\frac{2j\pi}{N}), ..., \sin(\frac{(N-1)j\pi}{N}) ]^T, \hspace{0.2cm} j=1,2,\dots N-1.
+\mathbf{u}_j = [ \sin(\frac{j\pi}{n}), \sin(\frac{2j\pi}{n}), ..., \sin(\frac{(N-1)j\pi}{n}) ]^T, \hspace{0.2cm} j=1,2,\dots n-1.
 \]
 !et
 
@@ -404,28 +404,28 @@ import numpy as np
 def initialize():
     RMin = 0.0
     RMax = 1.0
-    Dim = 10
-    return RMin, RMax, Dim
+    n = 10
+    return RMin, RMax, n
 
 #Get the boundary and number of integration points
-RMin, RMax, Dim = initialize()
+RMin, RMax, n = initialize()
 
 #Initialize constants, step size and the constant values of the diagonal and non-diagonal elements
-Step    = RMax/(Dim+1)
+Step    = RMax/(n+1)
 DiagConst = 2.0 / (Step*Step)
 NondiagConst =  -1.0 / (Step*Step)
 
 
 #Setting up a tridiagonal matrix
-Hamiltonian = np.zeros((Dim,Dim))
+Hamiltonian = np.zeros((n,n))
 Hamiltonian[0,0] = DiagConst
 Hamiltonian[0,1] = NondiagConst
-for i in range(1,Dim-1):
+for i in range(1,n-1):
     Hamiltonian[i,i-1]  = NondiagConst
     Hamiltonian[i,i]    = DiagConst
     Hamiltonian[i,i+1]  = NondiagConst
-Hamiltonian[Dim-1,Dim-2] = NondiagConst
-Hamiltonian[Dim-1,Dim-1] = DiagConst
+Hamiltonian[n-1,n-2] = NondiagConst
+Hamiltonian[n-1,n-1] = DiagConst
 # diagonalize and obtain eigenvalues, not necessarily sorted
 EigValues, EigVectors = np.linalg.eig(Hamiltonian)
 # sort eigenvectors and eigenvalues
@@ -433,7 +433,7 @@ permute = EigValues.argsort()
 EigValues = EigValues[permute]
 EigVectors = EigVectors[:,permute]
 # compute  the difference between the numerical and exact eigenvalues
-for i in range(Dim):
+for i in range(n):
     lambda_i = DiagConst+2*NondiagConst*cos((i+1)*pi*Step)
     print(abs(EigValues[i]-lambda_i))
 
@@ -455,7 +455,6 @@ We assume that the basis is orthogonal, that is
 \]
 !et
 
-!bsubex
 Show that an orthogonal or unitary transformation
 !bt
 \[
@@ -463,12 +462,12 @@ Show that an orthogonal or unitary transformation
 \]
 !et
 preserves the dot product and orthogonality. 
-!esubex
+
 
 ===== Exercise: Setting up a code for tridiagonal Toeplitz matrix =====
 
 !bsubex
-Convince your self about the proper scaling of the differential equation in terms of a dimensionless length parameter. What is the dimension of $u(x)$?
+Convince your self about the proper scaling of the differential equation in terms of a dimensionless length parameter. What is the dimension of $u(x)$? What is the dimension of the parameter $\gamma$ in the differential equation for the buckling beam?
 !esubex
 
 !bsubex
