@@ -33,17 +33,16 @@
 * Complex numbers, complex conjugates, etc.
 
 #### Class Schedule (10am-12pm EDT, 12pm EDT is set aside as an extra office hour)
-* 10:00-10:50: Lecture on the the breakdown of classical mechanics and the basics of quantum mechanics including an introduction to wave-particle duality and uncertainty and why we need probabilities in quantum mechanics.
+* 10:00-10:50: Lecture on the the breakdown of classical mechanics and the basics of quantum mechanics including an introduction to wave-particle duality and uncertainty and why we need probabilities in quantum mechanics. View the lecture notes [here](docs/src/JuliesMaterial/Day2Lec.ipynb).
 * 10:50-11:00: Break with time for questions
-* 11:00-11:50: Lecture on more quantum mechanics basics with an introduction to linear algebra and how quantum mechanics can be formulated as a linear algebra problem.  
+* 11:00-11:50: Lecture on more quantum mechanics basics with an introduction to linear algebra and how quantum mechanics can be formulated as a linear algebra problem.  View the lecture notes [here](docs/src/JuliesMaterial/Day2Lec.ipynb).
 * 11:50-12:00: Q&A session and homework help (Monday or Tuesday homework).  Can be extended into the 12pm-1pm office hour time slot.
 * A series of short questions will be asked and discussed during the lectures to help you check your understanding of the material.  
 
 #### Learning Goals for Day
 
 #### Homework Assignment for Wednesday
-* Complete [this activity](docs/src/JuliesMaterials/Day2HW1.md) (TO-DO: Add document) to review the quantum mechanics and linear algebra concepts learned today.
-* Complete [this notebook](doscs/src/JulieMaterials/Day2HW1.ipynb) (TO-DO: Add document) which walks you through how to find eigenvalues and eigenvectors in Python.  Keep this code handy because we will be using it on Wednesday and Thursday.
+* Complete [this activity](docs/src/JuliesMaterials/Day2HW.md) (TO-DO: Add document) to review the quantum mechanics and linear algebra concepts learned today.
 * Review the lecture notes for Wednesday located [here](docs/src/MortensMaterial/Day3Lec.ipynb).
 
 ## Wednesday June 23, 10am-1pm EDT/7am-10am PDT (Instructor: Morten)
