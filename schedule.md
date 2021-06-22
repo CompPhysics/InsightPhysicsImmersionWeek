@@ -46,7 +46,7 @@
 * Students should be able to symbolically calcualte expectation values.
 
 #### Homework Assignment for Wednesday
-* Complete [this activity](docs/src/JuliesMaterials/Day2HW.ipynb) (TO-DO: Add document) to review the quantum mechanics and linear algebra concepts learned today.
+* Complete [this activity](docs/src/JuliesMaterials/Homework2ipynb) to review the quantum mechanics and linear algebra concepts learned today.
 * Review the lecture notes for Wednesday located [here](docs/src/MortensMaterial/Day3Lec.ipynb).
 
 ## Wednesday June 23, 10am-1pm EDT/7am-10am PDT (Instructor: Morten)
@@ -64,8 +64,7 @@
 
 
 #### Homework Assignment for Thursday
-* Complete [this activity](docs/src/MortensMaterials/Day3HW1.md) 
-* Complete [this notebook](docs/src/MortensMaterials/Day3HW1.ipynb) 
+* Complete exercises 1 and 2 [in Wednesday's lecture](docs/src/MortensMaterials/Day3Lec.ipynb) 
 * Review the lecture notes for Thursday located [here](docs/src/MortensMaterial/Day4Lec.ipynb).
 
 
@@ -86,8 +85,7 @@
 
 
 #### Homework Assignment for Thursday
-* Complete [this activity](docs/src/MortensMaterials/Day4HW1.md) 
-* Complete [this notebook](docs/src/MortensMaterials/Day4HW1.ipynb) 
+* Complete exercises 1-2 [in Thursday's lecture](docs/src/MortensMaterials/Day4Lec.ipynb) 
 * Review the lecture notes for Friday located [here](docs/src/MortensMaterial/Day5Lec1.ipynb).
 
 
