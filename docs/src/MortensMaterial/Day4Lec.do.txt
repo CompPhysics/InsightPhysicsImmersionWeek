@@ -1,0 +1,295 @@
+TITLE: INSIGHT Physics Immersion Week (June 21 - June 25), Eigenvalue problems, Lecture Thursday June 24
+AUTHOR: Morten Hjorth-Jensen {copyright, 1999-present|CC BY-NC} at Department of Physics, University of Oslo & Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University
+DATE: June 23, 2021
+
+
+!split
+===== Discretizing The Schrödinger  Equation =====
+!bblock 
+We are first interested in the solution of the radial part of Schrödinger's equation for one electron.
+
+
+Assume we are in one dimension and let $x$ be the variable of interest and u(x) the solution to the time-independent Schrödinger equation
+!bt
+\[
+  -\frac{\hbar^2}{2 m} \frac{d^2 u}{dx^2}+ V(x) u(x) = E u(x).
+\]
+!et
+If $V(x)$ is the harmonic oscillator potential $(1/2)kr^2$ with
+$k=m\omega^2$, the energy eigenvalue with
+the oscillator frequency $\omega$ is
+!bt
+\[
+E_{n}=  \hbar \omega \left(n+\frac{1}{2}\right),
+\]
+!et
+with $n=0,1,2,\dots$.
+!eblock
+
+
+
+The boundary conditions for say the one-dimensional harmonic oscillator problem are $u(-\infty)=0$ and $u(\infty)=0$.
+
+
+
+!split
+===== Dimensionless Variable =====
+!bblock 
+We introduce a dimensionless variable $\rho = (1/\alpha) x$
+where $\alpha$ is a constant with dimension length and get
+!bt
+\[
+  -\frac{\hbar^2}{2 m \alpha^2} \frac{d^2}{d\rho^2} u(\rho) 
+       +  V(\rho)u(\rho)  = E u(\rho) .
+\]
+!et
+Inserting the harmonic oscillator potential $V(\rho) = (1/2) k \alpha^2\rho^2$ we end up with
+!bt
+\[
+  -\frac{\hbar^2}{2 m \alpha^2} \frac{d^2}{d\rho^2} u(\rho) 
+       + \frac{k}{2} \alpha^2\rho^2u(\rho)  = E u(\rho) .
+\]
+!et
+We multiply thereafter with $m\alpha^2/\hbar^2$ on both sides and obtain
+!bt
+\[
+  -\frac{1}{2}\frac{d^2}{d\rho^2} u(\rho) 
+       + \frac{mk}{2\hbar^2} \alpha^4\rho^2u(\rho)  = \frac{m\alpha^2}{\hbar^2}E u(\rho) .
+\]
+!et
+!eblock
+
+
+!split
+===== Rewriting the Equation =====
+!bblock 
+We have thus
+!bt
+\[
+  -\frac{1}{2}\frac{d^2}{d\rho^2} u(\rho) 
+       + \frac{mk}{2\hbar^2} \alpha^4\rho^2u(\rho)  = \frac{m\alpha^2}{\hbar^2}E u(\rho) .
+\]
+!et
+The constant $\alpha$ can now be fixed
+so that
+!bt
+\[
+\frac{mk}{\hbar^2} \alpha^4 = 1,
+\]
+!et
+or 
+!bt
+\[
+\alpha = \left(\frac{\hbar^2}{mk}\right)^{1/4}.
+\]
+!et
+Defining
+!bt 
+\[
+\lambda = \frac{m\alpha^2}{\hbar^2}E,
+\]
+!et
+we can rewrite Schroedinger's equation as
+!bt
+\[
+  -\frac{1}{2}\frac{d^2}{d\rho^2} u(\rho) + \frac{1}{2}\rho^2u(\rho)  = \lambda u(\rho) .
+\]
+!et
+This is the  equation to solve numerically. In one dimension 
+the eigenvalues are 
+$\lambda_0=1/2,\lambda_1=3/2,\lambda_2=5/2,\dots .$
+!eblock
+
+
+!split
+===== Boundary values =====
+!bblock 
+We use the by now standard
+expression for the second derivative of a function $u$
+!bt
+\begin{equation}
+    u''=\frac{u(\rho+h) -2u(\rho) +u(\rho-h)}{h^2} +O(h^2),
+    label{eq:diffoperation}
+\end{equation} 
+!et
+where $h$ is our step size in $x$.
+Next we define minimum and maximum values for the variable $\rho$,
+$\rho_{\mathrm{min}}$  and $\rho_{\mathrm{max}}$, respectively.
+You need to check your results for the energies against different values
+$\rho_{\mathrm{max}}$, since we cannot set, for example, 
+$\rho_{\mathrm{max}}=\infty$ or $\rho_{\mathrm{min}}=-\infty$.
+!eblock
+
+
+!split
+===== Discretization Variables =====
+!bblock 
+With a given number of steps, $n_{\mathrm{step}}$, we then 
+define the step $h$ as
+!bt
+\[
+  h=\frac{\rho_{\mathrm{max}}-\rho_{\mathrm{min}} }{n_{\mathrm{step}}}.
+\]
+!et
+Define an arbitrary value of $\rho$ as 
+!bt
+\[
+    \rho_i= \rho_{\mathrm{min}} + ih \hspace{1cm} i=0,1,2,\dots , n_{\mathrm{step}}
+\]
+!et
+we can rewrite the Schr\"odinger equation for $\rho_i$ as
+!bt
+\[
+-\frac{1}{2}\frac{u(\rho_i+h) -2u(\rho_i) +u(\rho_i-h)}{h^2}+\frac{1}{2}\rho_i^2u(\rho_i)  = \lambda u(\rho_i),
+\]
+!et
+or in  a more compact way
+!bt
+\[
+-\frac{1}{2}\frac{u_{i+1} -2u_i +u_{i-1}}{h^2}+\frac{1}{2}\rho_i^2u_i=-\frac{1}{2}\frac{u_{i+1} -2u_i +u_{i-1} }{h^2}+V_iu_i  = \lambda u_i,
+\]
+!et
+where $V_i=\rho_i^2$ is for example the harmonic oscillator potential in one dimension.
+!eblock
+
+
+!split
+===== As an eigenvalue problem =====
+!bblock 
+Define first the diagonal matrix element
+!bt
+\[
+   d_i=\frac{1}{h^2}+V_i,
+\]
+!et
+and the non-diagonal matrix element 
+!bt
+\[
+   e_i=-\frac{1}{2h^2}.
+\]
+!et
+In this case the non-diagonal matrix elements are given by a mere constant. *All non-diagonal matrix elements are equal*.
+
+With these definitions the Schroedinger equation takes the following form
+!bt
+\[
+d_iu_i+e_{i-1}u_{i-1}+e_{i+1}u_{i+1}  = \lambda u_i,
+\]
+!et
+where $u_i$ is unknown. We can write the 
+latter equation as a matrix eigenvalue problem 
+!bt
+\begin{equation}
+    \begin{bmatrix} d_1 & e_1 & 0   & 0    & \dots  &0     & 0 \\
+                                e_1 & d_2 & e_2 & 0    & \dots  &0     &0 \\
+                                0   & e_2 & d_3 & e_3  &0       &\dots & 0\\
+                                \dots  & \dots & \dots & \dots  &\dots      &\dots & \dots\\
+                                0   & \dots & \dots & \dots  &\dots       &d_{n_{\mathrm{step}}-2} & e_{n_{\mathrm{step}}-1}\\
+                                0   & \dots & \dots & \dots  &\dots       &e_{n_{\mathrm{step}}-1} & d_{n_{\mathrm{step}}-1}
+
+             \end{bmatrix}      \begin{bmatrix} u_{1} \\
+                                                              u_{2} \\
+                                                              \dots\\ \dots\\ \dots\\
+                                                              u_{n_{\mathrm{step}}-1}
+             \end{bmatrix}=\lambda \begin{bmatrix} u_{1} \\
+                                                              u_{2} \\
+                                                              \dots\\ \dots\\ \dots\\
+                                                              u_{n_{\mathrm{step}}-1}
+             \end{bmatrix} 
+      label{eq:sematrix}
+\end{equation} 
+!et
+or if we wish to be more detailed, we can write the tridiagonal matrix as
+!bt
+\begin{equation}
+    \begin{bmatrix} \frac{1}{h^2}+V_1 & -\frac{1}{2h^2} & 0   & 0    & \dots  &0     & 0 \\
+                                -\frac{1}{2h^2} & \frac{1}{h^2}+V_2 & -\frac{1}{2h^2} & 0    & \dots  &0     &0 \\
+                                0   & -\frac{1}{2h^2} & \frac{1}{h^2}+V_3 & -\frac{1}{2h^2}  &0       &\dots & 0\\
+                                \dots  & \dots & \dots & \dots  &\dots      &\dots & \dots\\
+                                0   & \dots & \dots & \dots  &\dots       &\frac{1}{h^2}+V_{n_{\mathrm{step}}-2} & -\frac{1}{2h^2}\\
+                                0   & \dots & \dots & \dots  &\dots       &-\frac{1}{2h^2} & \frac{1}{h^2}+V_{n_{\mathrm{step}}-1}
+
+             \end{bmatrix}
+label{eq:matrixse} 
+\end{equation} 
+!et
+Recall that the solutions are known via the boundary conditions at
+$i=n_{\mathrm{step}}$ and at the other end point, that is for  $\rho_0$.
+The solution is zero in both cases.
+!eblock
+
+
+
+!split
+===== The Python code =====
+The code sets up the Hamiltonian matrix by defining the the minimun and maximum values of $r$ with a
+maximum value of integration points.  These are set in the initialization function. It plots the 
+eigenfunctions of the three lowest eigenstates.
+!bc pycod
+%matplotlib inline
+#Program which solves the one-particle Schrodinger equation 
+#for a potential specified in function
+#potential(). This example is for the harmonic oscillator in one dimension
+# You need to set select a value for Rmin and Rmax
+from  matplotlib import pyplot as plt
+import numpy as np
+#Function for initialization of parameters
+def initialize():
+    RMin = -5.0
+    RMax = 5.0
+    Dim = 100
+    return RMin, RMax, Dim
+# Here we set up the harmonic oscillator potential
+def potential(r):
+    return 0.5*r*r
+
+#Get the boundary, orbital momentum and number of integration points
+RMin, RMax, Dim = initialize()
+
+#Initialize constants
+Step    = (RMax-RMin)/(Dim+1)
+DiagConst = 1.0 / (Step*Step)
+NondiagConst =  -0.5 / (Step*Step)
+
+#Calculate array of potential values
+v = np.zeros(Dim)
+r = np.linspace(RMin,RMax,Dim)
+for i in range(Dim):
+    r[i] = RMin + (i+1) * Step
+    v[i] = potential(r[i])
+
+#Setting up a tridiagonal matrix and finding eigenvectors and eigenvalues
+Hamiltonian = np.zeros((Dim,Dim))
+Hamiltonian[0,0] = DiagConst + v[0];
+Hamiltonian[0,1] = NondiagConst;
+for i in range(1,Dim-1):
+    Hamiltonian[i,i-1]  = NondiagConst;
+    Hamiltonian[i,i]    = DiagConst + v[i];
+    Hamiltonian[i,i+1]  = NondiagConst;
+Hamiltonian[Dim-1,Dim-2] = NondiagConst;
+Hamiltonian[Dim-1,Dim-1] = DiagConst + v[Dim-1];
+
+# diagonalize and obtain eigenvalues, not necessarily sorted
+EigValues, EigVectors = np.linalg.eig(Hamiltonian)
+# sort eigenvectors and eigenvalues
+permute = EigValues.argsort()
+EigValues = EigValues[permute]
+EigVectors = EigVectors[:,permute]
+# now plot the results for the three lowest lying eigenstates
+for i in range(3):
+    print(EigValues[i])
+FirstEigvector = EigVectors[:,0]
+SecondEigvector = EigVectors[:,1]
+ThirdEigvector = EigVectors[:,2]
+# Plot results
+plt.plot(r, FirstEigvector ,'b-',r, SecondEigvector ,'g-',r, ThirdEigvector ,'r-')
+plt.axis([RMin,RMax,-0.1, 0.1])
+plt.xlabel(r'$x$')
+plt.ylabel(r'Radial probability $|u(x)|^2$')
+plt.title(r'Radial probability distributions for three lowest-lying states')
+plt.savefig('eigenvector.pdf')
+plt.show()
+!ec
+
+
+
