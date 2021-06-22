@@ -237,37 +237,37 @@ import numpy as np
 def initialize():
     RMin = -5.0
     RMax = 5.0
-    Dim = 100
-    return RMin, RMax, Dim
+    n = 400
+    return RMin, RMax, n
 # Here we set up the harmonic oscillator potential
 def potential(r):
     return 0.5*r*r
 
 #Get the boundary, orbital momentum and number of integration points
-RMin, RMax, Dim = initialize()
+RMin, RMax, n = initialize()
 
-#Initialize constants
-Step    = (RMax-RMin)/(Dim+1)
+#Initialize constants, why n+1?
+Step    = (RMax-RMin)/(n+1)
 DiagConst = 1.0 / (Step*Step)
 NondiagConst =  -0.5 / (Step*Step)
 
 #Calculate array of potential values
-v = np.zeros(Dim)
-r = np.linspace(RMin,RMax,Dim)
-for i in range(Dim):
+v = np.zeros(n)
+r = np.linspace(RMin,RMax,n)
+for i in range(n):
     r[i] = RMin + (i+1) * Step
     v[i] = potential(r[i])
 
 #Setting up a tridiagonal matrix and finding eigenvectors and eigenvalues
-Hamiltonian = np.zeros((Dim,Dim))
+Hamiltonian = np.zeros((n,n))
 Hamiltonian[0,0] = DiagConst + v[0];
 Hamiltonian[0,1] = NondiagConst;
-for i in range(1,Dim-1):
+for i in range(1,n-1):
     Hamiltonian[i,i-1]  = NondiagConst;
     Hamiltonian[i,i]    = DiagConst + v[i];
     Hamiltonian[i,i+1]  = NondiagConst;
-Hamiltonian[Dim-1,Dim-2] = NondiagConst;
-Hamiltonian[Dim-1,Dim-1] = DiagConst + v[Dim-1];
+Hamiltonian[n-1,n-2] = NondiagConst;
+Hamiltonian[n-1,n-1] = DiagConst + v[n-1];
 
 # diagonalize and obtain eigenvalues, not necessarily sorted
 EigValues, EigVectors = np.linalg.eig(Hamiltonian)
@@ -282,8 +282,8 @@ FirstEigvector = EigVectors[:,0]
 SecondEigvector = EigVectors[:,1]
 ThirdEigvector = EigVectors[:,2]
 # Plot results
-plt.plot(r, FirstEigvector ,'b-',r, SecondEigvector ,'g-',r, ThirdEigvector ,'r-')
-plt.axis([RMin,RMax,-0.1, 0.1])
+plt.plot(r, FirstEigvector**2 ,'b-',r, SecondEigvector**2 ,'g-',r, ThirdEigvector**2 ,'r-')
+plt.axis([RMin,RMax,-0.01, 0.01])
 plt.xlabel(r'$x$')
 plt.ylabel(r'Radial probability $|u(x)|^2$')
 plt.title(r'Radial probability distributions for three lowest-lying states')
@@ -293,3 +293,65 @@ plt.show()
 
 
 
+
+===== Exercise: Box potential, infinite walls and finite box  =====
+
+!bsubex
+Replace the harmonic oscillator potential with a box potential with infinite walls. Define the boundary conditions and
+scale the equation of motion by introducing a dimensionless length scale. Find this length scale.
+
+!esubex
+
+!bsubex
+Use the above code (or write your own) and compute the eigenvalues for this potential and compare with the analytical results from your code developed for the classical two-point boundary value problem.
+!esubex
+
+!bsubex
+Replace now one of the infinite walls with a finite box potential (infinite at $x=0$). Introduce a potential depth parameter $V_0$ and a reach $a$ so that the potential $V(x) = -V_0$ when $0 < x \le a$ and $V(x)=0$ for $x > a$. Scale the equations and tune $V_0$ and $a$ so that you get only one bound state.  Discuss the differences between the infinite wall case and the finite box potential.
+!esubex
+
+
+===== Exercise: Hydrogen atom (challenge)  =====
+
+!bsubex
+Replace now the one-dimensional Schrödinger equation with the three-dimensional one where we have made a transformation from Cartesian coordinates to spherical coordinates with $r\in [0,\infty)$ and $\phi\in [0,2\pi]$ and $\theta \in [0,\pi]$.
+The radial equation reads 
+!bt
+\[
+  -\frac{\hbar^2}{2 m} \left ( \frac{1}{r^2} \frac{d}{dr} r^2
+  \frac{d}{dr} - \frac{l (l + 1)}{r^2} \right )R(r) 
+     + V(r) R(r) = E R(r).
+\]
+!et
+The quantum number
+$l$ is the orbital momentum of the electron.   Substitute $R(r) = (1/r) u(r)$ and show that the equation becomes
+!bt
+\[
+  -\frac{\hbar^2}{2 m} \frac{d^2}{dr^2} u(r) 
+       + \left ( V(r) + \frac{l (l + 1)}{r^2}\frac{\hbar^2}{2 m}
+                                    \right ) u(r)  = E u(r) .
+\]
+!et
+The boundary conditions are $u(0)=0$ and $u(\infty)=0$.
+
+!esubex
+
+!bsubex
+We introduce a dimensionless variable $\rho = (1/\alpha) r$
+where $\alpha$ is a constant with dimension length. Show that you can rewrite the above differential equation as
+!bt
+\[
+  -\frac{\hbar^2}{2 m \alpha^2} \frac{d^2}{d\rho^2} u(\rho) 
+       + \left ( V(\rho) + \frac{l (l + 1)}{\rho^2}
+         \frac{\hbar^2}{2 m\alpha^2} \right ) u(\rho)  = E u(\rho) .
+\]
+!et
+!esubex
+
+!bsubex
+Define now the potential $V$ to be the electrostatic Coulomb potential and scale the equations so that you get rid of the parameter $\alpha$. This choice of $\alpha$ leads to a famous length scale in physics. What is the name of this parameter?
+!esubex
+
+!bsubex
+Set $l=0$ and find the three lowest eigenvalues and compare them with the analytical results!
+!esubex
