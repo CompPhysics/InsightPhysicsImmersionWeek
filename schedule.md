@@ -64,8 +64,7 @@
 
 
 #### Homework Assignment for Thursday
-* Complete [this activity](docs/src/MortensMaterials/Day3HW1.md) 
-* Complete [this notebook](docs/src/MortensMaterials/Day3HW1.ipynb) 
+* Complete exercises 1 and 2 [in todays lecture](docs/src/MortensMaterials/Day3Lec.ipynb) 
 * Review the lecture notes for Thursday located [here](docs/src/MortensMaterial/Day4Lec.ipynb).
 
 
@@ -86,8 +85,7 @@
 
 
 #### Homework Assignment for Thursday
-* Complete [this activity](docs/src/MortensMaterials/Day4HW1.md) 
-* Complete [this notebook](docs/src/MortensMaterials/Day4HW1.ipynb) 
+* Complete exercises 1-3 [in today's lecture](docs/src/MortensMaterials/Day4Lec.ipynb) 
 * Review the lecture notes for Friday located [here](docs/src/MortensMaterial/Day5Lec1.ipynb).
 
 
