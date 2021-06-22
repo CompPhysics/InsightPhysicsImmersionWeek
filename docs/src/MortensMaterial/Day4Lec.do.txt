@@ -40,7 +40,7 @@ where $\alpha$ is a constant with dimension length and get
 !bt
 \[
   -\frac{\hbar^2}{2 m \alpha^2} \frac{d^2}{d\rho^2} u(\rho) 
-       +  V(\rho){\rho^2}u(\rho)  = E u(\rho) .
+       +  V(\rho)u(\rho)  = E u(\rho) .
 \]
 !et
 Inserting the harmonic oscillator potential $V(\rho) = (1/2) k \alpha^2\rho^2$ we end up with
@@ -154,7 +154,7 @@ where $V_i=\rho_i^2$ is for example the harmonic oscillator potential in one dim
 
 
 !split
-===== As a eigenvalue problem =====
+===== As an eigenvalue problem =====
 !bblock 
 Define first the diagonal matrix element
 !bt
@@ -180,36 +180,36 @@ where $u_i$ is unknown. We can write the
 latter equation as a matrix eigenvalue problem 
 !bt
 \begin{equation}
-    \left( \begin{array}{ccccccc} d_1 & e_1 & 0   & 0    & \dots  &0     & 0 \\
+    \begin{bmatrix} d_1 & e_1 & 0   & 0    & \dots  &0     & 0 \\
                                 e_1 & d_2 & e_2 & 0    & \dots  &0     &0 \\
                                 0   & e_2 & d_3 & e_3  &0       &\dots & 0\\
                                 \dots  & \dots & \dots & \dots  &\dots      &\dots & \dots\\
                                 0   & \dots & \dots & \dots  &\dots       &d_{n_{\mathrm{step}}-2} & e_{n_{\mathrm{step}}-1}\\
                                 0   & \dots & \dots & \dots  &\dots       &e_{n_{\mathrm{step}}-1} & d_{n_{\mathrm{step}}-1}
 
-             \end{array} \right)      \left( \begin{array}{c} u_{1} \\
+             \end{bmatrix}      \begin{bmatrix} u_{1} \\
                                                               u_{2} \\
                                                               \dots\\ \dots\\ \dots\\
                                                               u_{n_{\mathrm{step}}-1}
-             \end{array} \right)=\lambda \left( \begin{array}{c} u_{1} \\
+             \end{bmatrix}=\lambda \begin{bmatrix} u_{1} \\
                                                               u_{2} \\
                                                               \dots\\ \dots\\ \dots\\
                                                               u_{n_{\mathrm{step}}-1}
-             \end{array} \right) 
+             \end{bmatrix} 
       label{eq:sematrix}
 \end{equation} 
 !et
 or if we wish to be more detailed, we can write the tridiagonal matrix as
 !bt
 \begin{equation}
-    \left( \begin{array}{ccccccc} \frac{1}{h^2}+V_1 & -\frac{1}{2h^2} & 0   & 0    & \dots  &0     & 0 \\
+    \begin{bmatrix} \frac{1}{h^2}+V_1 & -\frac{1}{2h^2} & 0   & 0    & \dots  &0     & 0 \\
                                 -\frac{1}{2h^2} & \frac{1}{h^2}+V_2 & -\frac{1}{2h^2} & 0    & \dots  &0     &0 \\
                                 0   & -\frac{1}{2h^2} & \frac{1}{h^2}+V_3 & -\frac{1}{2h^2}  &0       &\dots & 0\\
                                 \dots  & \dots & \dots & \dots  &\dots      &\dots & \dots\\
                                 0   & \dots & \dots & \dots  &\dots       &\frac{1}{h^2}+V_{n_{\mathrm{step}}-2} & -\frac{1}{2h^2}\\
                                 0   & \dots & \dots & \dots  &\dots       &-\frac{1}{2h^2} & \frac{1}{h^2}+V_{n_{\mathrm{step}}-1}
 
-             \end{array} \right)  
+             \end{bmatrix}
 label{eq:matrixse} 
 \end{equation} 
 !et
@@ -226,6 +226,7 @@ The code sets up the Hamiltonian matrix by defining the the minimun and maximum 
 maximum value of integration points.  These are set in the initialization function. It plots the 
 eigenfunctions of the three lowest eigenstates.
 !bc pycod
+%matplotlib inline
 #Program which solves the one-particle Schrodinger equation 
 #for a potential specified in function
 #potential(). This example is for the harmonic oscillator in one dimension
@@ -236,17 +237,17 @@ import numpy as np
 def initialize():
     RMin = -5.0
     RMax = 5.0
-    Dim = 400
-    return RMin, RMax, lOrbital, Dim
+    Dim = 100
+    return RMin, RMax, Dim
 # Here we set up the harmonic oscillator potential
 def potential(r):
     return 0.5*r*r
 
 #Get the boundary, orbital momentum and number of integration points
-RMin, RMax, lOrbital, Dim = initialize()
+RMin, RMax, Dim = initialize()
 
 #Initialize constants
-Step    = RMax/(Dim+1)
+Step    = (RMax-RMin)/(Dim+1)
 DiagConst = 1.0 / (Step*Step)
 NondiagConst =  -0.5 / (Step*Step)
 
@@ -281,10 +282,10 @@ FirstEigvector = EigVectors[:,0]
 SecondEigvector = EigVectors[:,1]
 ThirdEigvector = EigVectors[:,2]
 # Plot results
-plt.plot(r, FirstEigvector**2 ,'b-',r, SecondEigvector**2 ,'g-',r, ThirdEigvector**2 ,'r-')
-plt.axis([0,4.6,0.0, 0.025])
-plt.xlabel(r'$r$')
-plt.ylabel(r'Radial probability $r^2|R(r)|^2$')
+plt.plot(r, FirstEigvector ,'b-',r, SecondEigvector ,'g-',r, ThirdEigvector ,'r-')
+plt.axis([RMin,RMax,-0.1, 0.1])
+plt.xlabel(r'$x$')
+plt.ylabel(r'Radial probability $|u(x)|^2$')
 plt.title(r'Radial probability distributions for three lowest-lying states')
 plt.savefig('eigenvector.pdf')
 plt.show()
