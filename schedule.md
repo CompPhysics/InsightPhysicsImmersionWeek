@@ -86,7 +86,7 @@
 
 #### Homework Assignment for Thursday
 * Complete exercises 1-2 [in Thursday's lecture](docs/src/MortensMaterials/Day4Lec.ipynb) 
-* Review the lecture notes for Friday located [here](docs/src/MortensMaterial/Day5Lec1.ipynb).
+* Review the lecture notes for Friday located [here](docs/src/MortensMaterial/Day5Lec.ipynb).
 
 
 ## Friday June 25, 10am-1pm EDT/7am-10am PDT (Instructor: Linda, Julie, Morten)
@@ -96,4 +96,4 @@
 * **10:30-10:40:** Break with time for questions
 * **10:40-11:10:** Introduction to the quantum harmonic oscillator and how it can be derived from the classical case.  Conceptual introduction to ladder operators and harmonic oscillator states. (Julie)
 * **11:20-11:30:** Break with time for questions
-* **11:30-12:00:** Group Learning Activity - Create a Python program which models the motion of a particle under the influence of the classical harmonic oscillator (hint: think about the eigenvalue method we learning on Wednesday and Thursday) (Morten)
+* **11:30-12:00:** Group Learning Activity - Create a Python program which models the motion of a particle under the influence of the classical harmonic oscillator (hint: think about the eigenvalue method we have studied  Wednesday and Thursday). We can in turn extend this to two interacting particles using the separation of variables into relative and center-of-mass coordinates (Morten)
