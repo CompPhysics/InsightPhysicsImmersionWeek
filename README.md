@@ -1,6 +1,6 @@
 # Insight Physics Immersion (June 21-25, 2021)
 
-This Jupyter Book contains all teaching material relevant for the Physics Immersion week of the Insight program (if you are not familiar with Jupyter Books, see [this tutorial](docs/src/JuliesMaterial/jb.md).  The aim of this week is to give you an introduction on how to use Python programming and numerical methods (part of Computational Science) to solve physics problems, starting with problems from classical mechanics and moving to solving quantum mechanics problems by the end of the week.
+This GitHub Repo contains all teaching material relevant for the Physics Immersion week of the Insight program.  The aim of this week is to give you an introduction on how to use Python programming and numerical methods (part of Computational Science) to solve physics problems, starting with problems from classical mechanics and moving to solving quantum mechanics problems by the end of the week.
 
 ## Assumed Knowledge
 We assume you have a basic knowledge of calculus and classical mechanics (such as harmonic oscillations, two-body problems like the Earth-Sun problem and similar).  However, a review of these topics will be provided in the pre-course assignments. Any student who does not feel confident in their knowledge of these topics after reviewing the pre-course assignments should contact the lectures (Julie Butler: <butle222@msu.edu> or Morten Hjorth-Jensen: <hjensen@msu.edu>).
