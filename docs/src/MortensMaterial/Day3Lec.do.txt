@@ -331,7 +331,7 @@ expression for the second derivative of a function $u$ (called a "three-point":"
 where $h$ is a so-called  step size.
 
 !split
-===== Min and Max values for the variabale $\rho$ =====
+===== Min and Max values for the variable $\rho$ =====
 
 Next we define minimum and maximum values for the variable $\rho$,
 $\rho_{\mathrm{min}}=0$  and $\rho_{\mathrm{max}}=1$, respectively.
@@ -467,7 +467,7 @@ preserves the dot product and orthogonality.
 ===== Exercise: Setting up a code for tridiagonal Toeplitz matrix =====
 
 !bsubex
-Convince your self about the proper scaling of the differential equation in terms of a dimensionless length parameter. What is the dimension of $u(x)$? What is the dimension of the parameter $\gamma$ in the differential equation for the buckling beam?
+Convince your self about the proper scaling of the differential equation in terms of a dimensionless length parameter. What is the dimension of $u(x)$? What is the dimension of the parameter $\gamma$ in the differential equation for the buckling beam/spring?
 !esubex
 
 !bsubex
@@ -479,7 +479,7 @@ Use the included python code here or write your own and compare the analytical e
 !esubex
 
 !bsubex
-Plot the eigenvalues for the three lowest eigenvalues and comment your results.
+Plot the eigenvectors for the three lowest eigenvalues and comment your results.
 !esubex
 
 
