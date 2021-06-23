@@ -36,7 +36,7 @@ Let us now move to three dimensions and look at a particle moving in a three-dim
 ===== Moving to three dimension and spherical coordinates =====
 
 !bblock 
-We are first interested in the solution of the radial part of Schroedinger's equation for one electron. This equation reads
+We are first interested in the solution of the radial part of Schrödinger's equation for one electron. This equation reads
 !bt
 \[
   -\frac{\hbar^2}{2 m} \left ( \frac{1}{r^2} \frac{d}{dr} r^2
@@ -63,7 +63,7 @@ with $n=0,1,2,\dots$ and $l=0,1,2,\dots$.
 Since we have made a transformation to spherical coordinates it means that 
 $r\in [0,\infty)$.  
 The quantum number
-$l$ is the orbital momentum of the electron.   Then we substitute $R(r) = (1/r) u(r)$ and obtain
+$l$ is the orbital momentum of the electron.   A standard trick is to make the  substitution $R(r) = (1/r) u(r)$ and obtain
 !bt
 \[
   -\frac{\hbar^2}{2 m} \frac{d^2}{dr^2} u(r) 
@@ -77,8 +77,9 @@ The boundary conditions are $u(0)=0$ and $u(\infty)=0$.
 
 !split
 ===== Scaling again =====
-!bblock 
-We introduce a dimensionless variable $\rho = (1/\alpha) r$
+!bblock
+
+We introduce again a dimensionless variable $\rho = (1/\alpha) r$
 where $\alpha$ is a constant with dimension length and get
 !bt
 \[
@@ -104,6 +105,8 @@ We multiply thereafter with $2m\alpha^2/\hbar^2$ on both sides and obtain
 !et
 !eblock
 
+
+_Note that here, compared with what did earlier, we multiplied away the factor $1/2$ in the kinetic energy and the potential energy. It means that our energies will be twice the value._
 
 !split
 ===== Natural length scale =====
@@ -134,7 +137,7 @@ Defining
 \lambda = \frac{2m\alpha^2}{\hbar^2}E,
 \]
 !et
-we can rewrite Schroedinger's equation as
+we can rewrite Schrödinger's equation as
 !bt
 \[
   -\frac{d^2}{d\rho^2} u(\rho) + \rho^2u(\rho)  = \lambda u(\rho) .
@@ -142,14 +145,15 @@ we can rewrite Schroedinger's equation as
 !et
 This is the first equation to solve numerically. In three dimensions 
 the eigenvalues for $l=0$ are 
-$\lambda_0=3,\lambda_1=7,\lambda_2=11,\dots .$
+$\lambda_0=3,\lambda_1=7,\lambda_2=11,\dots .$ This is because we multiplied away $1/2$ in the kinetic and potential energy.
+If you keep it you simply need to divide by two the above energies.
 !eblock
 
 
 !split
 ===== Two particles (electrons) =====
 !bblock 
-We are going to study two electrons in a harmonic oscillator well which
+We are going to study two particles (electrons for example) in a harmonic oscillator well which
 also interact via a repulsive Coulomb interaction.
 Let us start with the single-electron equation written as
 !bt
@@ -160,7 +164,7 @@ Let us start with the single-electron equation written as
 !et
 where $E^{(1)}$ stands for the energy with one electron only.
 For two electrons with no repulsive Coulomb interaction, we have the following 
-Schroedinger equation
+Schrödinger equation
 !bt
 \[
 \left(  -\frac{\hbar^2}{2 m} \frac{d^2}{dr_1^2} -\frac{\hbar^2}{2 m} \frac{d^2}{dr_2^2}+ \frac{1}{2}k r_1^2+ \frac{1}{2}k r_2^2\right)u(r_1,r_2)  = E^{(2)} u(r_1,r_2) .
@@ -280,22 +284,6 @@ we can rewrite Schroedinger's equation as
 
 We treat $\omega_r$ as a parameter which reflects the strength of the oscillator potential.
 
-Here we will study the cases $\omega_r = 0.01$, $\omega_r = 0.5$, $\omega_r =1$,
-and $\omega_r = 5$   
-for the ground state only, that is the lowest-lying state.
-
-With no repulsive Coulomb interaction 
-you should get a result which corresponds to 
-the relative energy of a non-interacting system.   
-Make sure your results are 
-stable as functions of $\rho_{\mathrm{max}}$ and the number of steps.
-
-We are only interested in the ground state with $l=0$. We omit the 
-center-of-mass energy.
-
-For specific oscillator frequencies, the above equation has analytic answers,
-see the article by M.~Taut, Phys. Rev. A 48, 3561 - 3566 (1993).
-The article can be retrieved from the following web address URL: "http://prola.aps.org/abstract/PRA/v48/i5/p3561_1".
 
 
 
@@ -321,23 +309,24 @@ def initialize():
     n = 400
     return RMin, RMax, n
 # Here we set up the harmonic oscillator potential plus the Coulomb potential
-def potential(r):
-    return 0.5*r*r+1/r
+def potential(r,omega):
+    return omega*omega*r*r+1/r
 
 #Get the boundary, orbital momentum and number of integration points
 RMin, RMax, n = initialize()
 
 #Initialize constants, why n+1?
 Step    = (RMax-RMin)/(n+1)
-DiagConst = 1.0 / (Step*Step)
-NondiagConst =  -0.5 / (Step*Step)
+DiagConst = 2.0 / (Step*Step)
+NondiagConst =  -1.0 / (Step*Step)
+omega = 1.0
 
 #Calculate array of potential values
 v = np.zeros(n)
 r = np.linspace(RMin,RMax,n)
 for i in range(n):
     r[i] = RMin + (i+1) * Step
-    v[i] = potential(r[i])
+    v[i] = potential(r[i],omega)
 
 #Setting up a tridiagonal matrix and finding eigenvectors and eigenvalues
 Hamiltonian = np.zeros((n,n))
@@ -376,47 +365,27 @@ plt.show()
 
 
 
-===== Exercise: Hydrogen atom (challenge)  =====
+===== Exercise: Exploring various oscillator traps  =====
 
 !bsubex
-Replace now the one-dimensional Schrödinger equation with the three-dimensional one where we have made a transformation from Cartesian coordinates to spherical coordinates with $r\in [0,\infty)$ and $\phi\in [0,2\pi]$ and $\theta \in [0,\pi]$.
-The radial equation reads 
-!bt
-\[
-  -\frac{\hbar^2}{2 m} \left ( \frac{1}{r^2} \frac{d}{dr} r^2
-  \frac{d}{dr} - \frac{l (l + 1)}{r^2} \right )R(r) 
-     + V(r) R(r) = E R(r).
-\]
-!et
-The quantum number
-$l$ is the orbital momentum of the electron.   Substitute $R(r) = (1/r) u(r)$ and show that the equation becomes
-!bt
-\[
-  -\frac{\hbar^2}{2 m} \frac{d^2}{dr^2} u(r) 
-       + \left ( V(r) + \frac{l (l + 1)}{r^2}\frac{\hbar^2}{2 m}
-                                    \right ) u(r)  = E u(r) .
-\]
-!et
-The boundary conditions are $u(0)=0$ and $u(\infty)=0$.
+
+Here we will study the cases $\omega_r = 0.01$, $\omega_r = 0.5$, $\omega_r =1$,
+and $\omega_r = 5$   
+for the ground state only, that is the lowest-lying state.
+
+With no repulsive Coulomb interaction 
+you should get a result which corresponds to 
+the relative energy of a non-interacting system.   
+Make sure your results are 
+stable as functions of $\rho_{\mathrm{max}}$ and the number of steps.
+
+We are only interested in the ground state with $l=0$. We omit the 
+center-of-mass energy.
+
+For specific oscillator frequencies, the above equation has analytic answers,
+see the article by M.~Taut, Phys. Rev. A 48, 3561 - 3566 (1993).
+The article can be retrieved from the following web address URL: "http://prola.aps.org/abstract/PRA/v48/i5/p3561_1".
+
 
 !esubex
 
-!bsubex
-We introduce a dimensionless variable $\rho = (1/\alpha) r$
-where $\alpha$ is a constant with dimension length. Show that you can rewrite the above differential equation as
-!bt
-\[
-  -\frac{\hbar^2}{2 m \alpha^2} \frac{d^2}{d\rho^2} u(\rho) 
-       + \left ( V(\rho) + \frac{l (l + 1)}{\rho^2}
-         \frac{\hbar^2}{2 m\alpha^2} \right ) u(\rho)  = E u(\rho) .
-\]
-!et
-!esubex
-
-!bsubex
-Define now the potential $V$ to be the electrostatic Coulomb potential and scale the equations so that you get rid of the parameter $\alpha$. This choice of $\alpha$ leads to a famous length scale in physics. What is the name of this parameter?
-!esubex
-
-!bsubex
-Set $l=0$ and find the three lowest eigenvalues and compare them with the analytical results!
-!esubex
