@@ -361,15 +361,17 @@ plt.savefig('eigenvector.pdf')
 plt.show()
 !ec
 
+For specific oscillator frequencies, the system of equations with the Coulomb interaction  has analytic answers,
+see the article by M.~Taut, Phys. Rev. A 48, 3561 - 3566 (1993).
+The article can be retrieved from the following web address URL: "http://prola.aps.org/abstract/PRA/v48/i5/p3561_1".
 
 
 
 
 ===== Exercise: Exploring various oscillator traps  =====
 
-!bsubex
 
-Here we will study the cases $\omega_r = 0.01$, $\omega_r = 0.5$, $\omega_r =1$,
+Here we will study the cases with frequencies $\omega_r = 0.01$, $\omega_r = 0.5$, $\omega_r =1$,
 and $\omega_r = 5$   
 for the ground state only, that is the lowest-lying state.
 
@@ -382,10 +384,22 @@ stable as functions of $\rho_{\mathrm{max}}$ and the number of steps.
 We are only interested in the ground state with $l=0$. We omit the 
 center-of-mass energy.
 
-For specific oscillator frequencies, the above equation has analytic answers,
-see the article by M.~Taut, Phys. Rev. A 48, 3561 - 3566 (1993).
-The article can be retrieved from the following web address URL: "http://prola.aps.org/abstract/PRA/v48/i5/p3561_1".
+
+!bsubex
+
+Perform first a calculation for the ground state only with $\omega_r=1.0$. Compare the energies obtained with and without the Coulomb interaction. Plot the wavefunctions squared and compare the interacting and non-interacting cases. Commment your results. Are these results expected?
 
 
 !esubex
+
+
+!bsubex
+
+Repeat the previous exercise but now for all the frequencies $\omega_r = 0.01$, $\omega_r = 0.5$, $\omega_r =1$,
+and $\omega_r = 5$   
+for the ground state only. Compare the non-interacting case with the interacting case. Are there bigger or smaller differences between the interacting and non-interacting cases as function of $\omega_r$? Comment your results.
+
+!esubex
+
+
 
