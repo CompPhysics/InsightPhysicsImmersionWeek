@@ -50,9 +50,9 @@
 * Review the lecture notes for Wednesday located [here](docs/src/MortensMaterial/Day3Lec.ipynb).
 
 ## Wednesday June 23, 10am-1pm EDT/7am-10am PDT (Instructor: Morten)
-* 10:00-10:50: Lecture on eigenvalue problems and classical two-point boundary value problem. Example system: spring or beam fastened in both ends and quantization. View the lecture notes [here](docs/src/MortensMaterial/Day3Lec.ipynb).
+* 10:00-10:50: Lecture on eigenvalue problems and classical two-point boundary value problem. Example system: spring or beam fastened in both ends and quantization. View the lecture notes [here](docs/src/MortensMaterial/Day3Lec.ipynb), view the recording [here](https://mediaspace.msu.edu/media/INSIGHT%20Physics%20Immersion%20Week%20Day%203/1_asyur293).
 * 10:50-11:00: Break with time for questions
-* 11:00-11:50: More on two-point boundary value problems and how to solve eigenvalue problems with Numpy. Develop code for two-point boundary value problem and study analytical and numerical solutions. See the lectures for example code [here](docs/src/MortensMaterial/Day3Lec.ipynb).
+* 11:00-11:50: More on two-point boundary value problems and how to solve eigenvalue problems with Numpy. Develop code for two-point boundary value problem and study analytical and numerical solutions. See the lectures for example code [here](docs/src/MortensMaterial/Day3Lec.ipynb), view the recording [here](https://mediaspace.msu.edu/media/INSIGHT%20Physics%20Immersion%20Week%20Day%203/1_asyur293).
 * 11:50-12:00: Q&A session and homework help (Wednesday's homework).  Can be extended into the 12pm-1pm office hour time slot.
 * A series of short questions will be asked and discussed during the lectures to help you check your understanding of the material.  
 
