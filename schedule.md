@@ -9,7 +9,7 @@
 
 #### Class Schedule (10am-12pm EDT, 12pm EDT is set aside as an extra office hour)
 * 10:00-10:30: Introduction to the course and Q&A on the pre-course assignments (additional questions can be asked during the office hour immediately after class)
-* 10:30-11:00: Lecture on the classical two-body problem and how to translate a two-body problem to Python code.   View the lecture notes [here](docs/src/JuliesMaterial/Day1Lec2.ipynb), the recording [here](https://mediaspace.msu.edu/media/INSIGHT%20Physics%20Immersion%20Week%20Day%202%20Video%201/1_zy2ywhw1).
+* 10:30-11:00: Lecture on the classical two-body problem and how to translate a two-body problem to Python code.   View the lecture notes [here](docs/src/JuliesMaterial/Day1Lec2.ipynb)
 * 11:00-12:00: Group Learning Activity - In groups of approximately 4 create a Python code that models the Earth-Sun two-body system.  Once correct, try to extend the problem to model two electrons, and finally two atoms.  A more detailed problem statement can be found [here](docs/src/JuliesMaterial/Day1Activity1.ipynb).  Questions can be asked about the project during class and after class during the office hour.
 
 #### Learning Goals for Day
@@ -33,9 +33,9 @@
 * Complex numbers, complex conjugates, etc.
 
 #### Class Schedule (10am-12pm EDT, 12pm EDT is set aside as an extra office hour)
-* 10:00-10:50: Lecture on the the breakdown of classical mechanics and the basics of quantum mechanics including an introduction to wave-particle duality and uncertainty and why we need probabilities in quantum mechanics. View the lecture notes [here](docs/src/JuliesMaterial/Day2Lec.ipynb).
+* 10:00-10:50: Lecture on the the breakdown of classical mechanics and the basics of quantum mechanics including an introduction to wave-particle duality and uncertainty and why we need probabilities in quantum mechanics. View the lecture notes [here](docs/src/JuliesMaterial/Day2Lec.ipynb), the recording [here](https://mediaspace.msu.edu/media/INSIGHT%20Physics%20Immersion%20Week%20Day%202%20Video%201/1_zy2ywhw1), and the hand-written notes [here](docs/src/JuliesMaterial/qm_handwritten.pdf).
 * 10:50-11:00: Break with time for questions
-* 11:00-11:50: Lecture on more quantum mechanics basics with an introduction to linear algebra and how quantum mechanics can be formulated as a linear algebra problem.  View the lecture notes [here](docs/src/JuliesMaterial/Day2Lec.ipynb), the recording [here](https://mediaspace.msu.edu/media/zoom_1.mp4/1_czym617b).
+* 11:00-11:50: Lecture on more quantum mechanics basics with an introduction to linear algebra and how quantum mechanics can be formulated as a linear algebra problem.  View the lecture notes [here](docs/src/JuliesMaterial/Day2Lec.ipynb), the recording [here](https://mediaspace.msu.edu/media/zoom_1.mp4/1_czym617b), and the hand-written notes [here](docs/src/JuliesMaterial/qm_handwritten.pdf).
 * 11:50-12:00: Q&A session and homework help (Monday or Tuesday homework).  Can be extended into the 12pm-1pm office hour time slot.
 * A series of short questions will be asked and discussed during the lectures to help you check your understanding of the material.  
 
