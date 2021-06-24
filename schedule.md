@@ -73,7 +73,7 @@
 ## Thursday June 24, 10am-1pm EDT/7am-10am PDT (Instructor: Morten)
 * 10:00-10:50: Lecture on eigenvalue problems and quantum mechanical two-point boundary value problem. Example system: particle in a box potential or similar one-particle problems. View the lecture notes [here](docs/src/MortensMaterial/Day4Lec1ipynb), view the hand-written notes [here](docs/src/MortensMaterial/thurs_handwritten.pdf).
 * 10:50-11:00: Break with time for questions
-* 11:00-11:50: How to solve quantum mechanical eigenvalue problem for particle confined to move in a potential. Develop code for two-point boundary value problem and study analytical and numerical solutions. See the lectures for example code [here](docs/src/MortensMaterial/Day4Lec.ipynb). We will reuse the code from Wednesday. The only addition which is needed is the given potential. 
+* 11:00-11:50: How to solve quantum mechanical eigenvalue problem for particle confined to move in a potential. Develop code for two-point boundary value problem and study analytical and numerical solutions. See the lectures for example code [here](docs/src/MortensMaterial/Day4Lec.ipynb). We will reuse the code from Wednesday. The only addition which is needed is the given potential. See the recording [here](https://mediaspace.msu.edu/media/t/1_x46f1pjb).
 * 11:50-12:00: Q&A session and homework help (Thursday's homework).  Can be extended into the 12pm-1pm office hour time slot.
 * A series of short questions will be asked and discussed during the lectures to help you check your understanding of the material.  
 
