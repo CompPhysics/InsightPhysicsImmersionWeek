@@ -4,7 +4,8 @@ DATE: June 23, 2021
 
 
 !split
-===== Discretizing The Schrödinger  Equation =====
+===== Discretizing the Schrödinger  Equation =====
+
 !bblock 
 Thursday we discretized the one-dimensional Schrödinger equation for one electron moving in a given potential.
 Here's a short repetition.
